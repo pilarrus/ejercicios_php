@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 3 - Pilar</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <button>
+        <a href="../../index.php">Volver a Ejercicios</a>
+    </button>
+    <form action="../php/ejercicio3.php" method="post">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required>
+            
+        </div>
+        <div>
+            <label for="">Sexo: </label><br>
+            <input type="radio" name="sexo" value="H" checked/>Hombre
+            <input type="radio" name="sexo" value="M"/>Mujer
+        </div>
+        <div>
+            <label for="">Idiomas:</label><br>
+            <input type="checkbox" name="idiomas[]" id="" value="Inglés">Inglés
+            <input type="checkbox" name="idiomas[]" id="" value="Francés">Francés
+            <input type="checkbox" name="idiomas[]" id="" value="Español" checked>Español
+            <input type="checkbox" name="idiomas[]" id="" value="Italiano">Italiano
+            <input type="checkbox" name="idiomas[]" id="" value="Portugués">Portugués
+        </div>
+        <div>
+            <label for="nacionalidades">Nacionalidades:</label><br>
+            <select name="nacionalidades[]" id="nacionalidades" multiple="multiple" required>
+                <option value="Francesa">Francesa</option>
+                <option value="Española">Española</option>
+                <option value="Italiana">Italiana</option>
+                <option value="Portuguesa">Portuguesa</option>
+            </select>
+        </div>
+        <div>
+            <label for="aficiones">Aficiones:</label><br>
+            <select name="aficiones[]" id="aficiones" multiple="multiple" required>
+                <option value="Hacer deporte">Hacer deporte</option>
+                <option value="Leer">Leer</option>
+                <option value="Estar con amigos">Estar con amigos</option>
+                <option value="Ver peliculas">Ver peliculas</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" name="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>
