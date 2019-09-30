@@ -13,23 +13,23 @@
     </button>
 <?php
     if(isset($_POST['submit'])) {
-        if(isset($_POST['aristoteles'])) {
-            $aristoteles = trim($_POST['aristoteles']);
-            $aristoteles = strip_tags($aristoteles);
-            $aristoteles = htmlentities($aristoteles);
-            $aristoteles = htmlspecialchars($aristoteles);
+
+        function controla_entrada($variable) {
+            if(isset($variable)) {
+                $variable = strip_tags($variable); //Elimina etiquetas HTML y PHP
+                $variable = htmlspecialchars($variable, ENT_QUOTES, "UTF-8"); //Convierte caracteres especiales en entidades HTML
+                $variable = trim($variable); //Elimina espacios que haya al principio y al final
+            } else {
+                $variable = "eee";
+            }
+            return $variable;
         }
-        //var_dump($aristoteles);
-        echo $aristoteles;
         
-        if(isset($_POST['cervantes'])) {
-            $cervantes = trim($_POST['cervantes']);
-            $cervantes = strip_tags($cervantes);
-            $cervantes = htmlentities($cervantes);
-            $cervantes = htmlspecialchars($cervantes);
-        }
-        //var_dump($cervantes);
-        echo $cervantes;
+        $aristoteles = controla_entrada($_POST['aristoteles']);
+        $cervantes = controla_entrada($_POST['cervantes']);
+        echo "<p>$aristoteles</p>";
+        echo "<p>$cervantes</p>";
+
     } else {
         header("Location: ../html/ejercicio4.html");
     }
