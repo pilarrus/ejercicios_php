@@ -20,11 +20,11 @@ h2 {
     text-align: center;
 }
 
-.center {
+/*.center {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-}
+}*/
 
 .index {
     border: 1px solid black;
