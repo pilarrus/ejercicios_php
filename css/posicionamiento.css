@@ -1,3 +1,41 @@
 .center {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    max-width: 83rem;
+    min-width: 30rem;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+.col_1_of_2 {
+    width: calc((100% - 6rem) / 2);
+    background-color: #A89F19;
+    float: left;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+
+.col_1_of_2:not(:last-child) {
+    margin-right: 6rem;
+}
+
+.col_1_of_2::after {
+    content: "";
+    display: table;
+    clear: both;
 }

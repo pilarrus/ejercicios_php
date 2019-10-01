@@ -1,4 +1,5 @@
 <?php
+
     function controla_entrada($variable) {
         if(isset($variable)) {
             $variable = strip_tags($variable); //Elimina etiquetas HTML y PHP

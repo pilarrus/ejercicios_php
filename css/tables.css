@@ -7,5 +7,10 @@ table, th, td {
 
 .multiplicationTable {
     display: inline;
-    border: none;
+    background-color: #E14F75;
+    border-radius: 1rem;
+}
+
+.multiplicationTable tbody {
+    background-color: #A89F19;
 }

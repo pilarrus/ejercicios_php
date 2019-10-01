@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../css/tables.css">
 </head>
 <body>
-    <button class="volver_ejercicios">
+    <button class="return_exercises">
         <a href="../../index.php">Volver a Ejercicios</a>
     </button>
     <div class="center">

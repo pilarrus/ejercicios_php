@@ -1,0 +1,31 @@
+label {
+    margin: 1rem;
+}
+
+input {
+    margin: 1rem;
+}
+
+select {
+    margin: 1rem;
+}
+
+textarea {
+    margin: 1rem;
+    max-width: 41,5rem;
+    resize: none;
+}
+
+.form_choose_table {
+    background-color: #A89F19;
+    padding: 1rem;
+}
+
+.loggin {
+    border: 1px solid #A89F19;
+}
+
+.cite {
+    border: 1px solid #A89F19;
+    padding: 4rem;
+}

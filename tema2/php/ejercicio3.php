@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="../../css/tables.css">
 </head>
 <body>
-    <button class="volver_ejercicios">
+    <button class="return_exercises">
         <a href="../../index.php">Volver a Ejercicios</a>
     </button>
+    <h2>Ejercicio 1 con HEREDOC</h2>
     <div class="center">
     <?php 
         $temperaturas = array();
@@ -25,7 +26,7 @@
         $temperaturas['Caja_5'] = array(1,1,1,2,2,2,3,1,1,1,5);
 
         echo <<<EOD
-        <h2>Ejercicio 1 con HEREDOC</h2>
+        
         <table>\n
         <tr>\n<th>Cajas</th>\n<th colspan='11'>Temperaturas</th>\n
 EOD;
@@ -45,6 +46,8 @@ EOD;
             }
         echo <<<EOD
         </table>\n
+        </div>\n
+        <div class='center'>\n
         <p>Las cajas con temperaturas superiores a 4º son: \n
 EOD;
         foreach($temperaturas as $caja => $valores){
@@ -59,11 +62,13 @@ EOD;
         }
         echo <<<EOD
         </p>\n
+        </div>\n
 EOD;
     ?>
     </div>
+    <h2 class="heredoc">Ejercicio 2 con HEREDOC</h2>
     <div class="center exercise2">
-    <h2>Ejercicio 2 con HEREDOC</h2>
+    
     <?php
 
         define("NUMTABLAS", 3);
@@ -88,6 +93,5 @@ EOD;
         }
 
     ?>
-    </div>
 </body>
 </html>

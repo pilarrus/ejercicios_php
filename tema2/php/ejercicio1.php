@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../css/tables.css">
 </head>
 <body>
-    <button class="volver_ejercicios">
+    <button class="return_exercises">
         <a href="../../index.php">Volver a Ejercicios</a>
     </button>
     <div class="center">
@@ -35,6 +35,8 @@
                 echo "</tr>\n";
             }
         echo "</table>\n";
+        echo "</div>\n";
+        echo "<div class='center'>\n";
         echo "<p>Las cajas con temperaturas superiores a 4º son: \n";
         foreach($temperaturas as $caja => $valores){
             foreach($valores as $numero){
@@ -45,7 +47,7 @@
             }
         }
         echo "</p>\n";
+        echo "</div>\n";
     ?>
-    </div>
 </body>
 </html>

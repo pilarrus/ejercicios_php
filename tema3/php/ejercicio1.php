@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio 1 - Pilar</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/posicionamiento.css">
 </head>
 <body>
-    <button>
+    <button class="return_exercises">
         <a href="../../index.php">Volver a Ejercicios</a>
     </button>
-    <div>
-        <h2>VERBOS IRREGULARES</h2>
+    <h2>VERBOS IRREGULARES</h2>
+    <div class="row">
         <?php
             
             $palabras["despertar"] = array("awake", "awoke", "awoken");
@@ -33,7 +37,7 @@
                 //Habrá tres contadores: aciertos, fallos y preguntas_hechas.
                 //Cada vez que entre por aquí sumo uno a preguntas_hechas.
                 //Compruebo si está bien o mal y dependiendo de la respuesta sumo uno a aciertos o a fallos.
-                $aciertos = 0;
+                /*$aciertos = 0;
                 $fallos = 0;
                 $preguntas_hechas = 0;
 
@@ -60,7 +64,7 @@
                 echo $preguntas_hechas;
                 echo $aciertos;
                 echo $fallos;
-                
+                */
             } else {
                 //Si no ha pasado por el formulario.
                 //Que muestre una palabra en español y los tres campos que tiene que rellenar.
@@ -84,9 +88,9 @@
                 }
             }
         ?>
-        <div class="button">
-                <button type="submit" name="submit">Enviar</button>
-            </div>
+        <div class="center">
+            <button type="submit" name="submit" class="submit">Enviar</button>
+        </div>
         </form>
     </div>
 </body>

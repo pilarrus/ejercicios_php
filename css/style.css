@@ -1,21 +1,25 @@
-.content {
-    position: relative;
-}
-
-/*.center {
-    border: 1px solid orange;
+h1 {
+    color: #E14F75;
+    max-width: 114rem;
     margin: 0 auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+h2 {
+    color: #E14F75;
+    text-align: center;
+    padding: 1rem;
+}
+
+.heredoc {
+    margin-top: 3rem;
+}
+
+/*body {
+    background-image: url("../img/background_index.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }*/
-
-
-.exercise2 {
-    top: 350px;
-}
-
-.exercise4 {
-    color: black;
-}
-
-.form {
-    margin-top: 15 px;
-}

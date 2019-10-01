@@ -9,23 +9,25 @@
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/buttons.css">
     <link rel="stylesheet" href="../../css/posicionamiento.css">
-    <link rel="stylesheet" href="../../css/tables.css">
+    <link rel="stylesheet" href="../../css/forms.css">
 </head>
 <body>
-    <button class="volver_ejercicios">
+    <button class="return_exercises">
         <a href="../../index.php">Volver a Ejercicios</a>
     </button>
     <div class="center">
-        <form action="../php/metodos.php?table=5" method="get"> 
+        <form class="form_choose_table" action="../php/tabla_de_multiplicar.php?table=5" method="get"> 
+            
             <label for="num">Introduce el nº de la tabla de multiplicar que quieres visualizar:</label>
             
-            <div>
+            <div class="center">
                 <input type="text" id="num" name="table" required/>
             </div>
 
-            <div class="button">
-                    <button type="submit">Enviar</button>
+            <div class="center">
+                    <button type="submit" class="submit">Enviar</button>
             </div>
+
         </form>
     </div>
 </body>

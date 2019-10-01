@@ -1,16 +1,26 @@
-.index {
-    width: 90px;
+.exercise {
     border: 1px solid black;
     margin: 3px;
     padding: 5px;
     background: #38b3dc;
 }
 
-.index a {
-    text-decoration: none;
+.exercise a {
     color: white;
 }
 
-.volver_ejercicios {
-    background-color: #f77a1d;
+.return_exercises {
+    background-color: #38b3dc;
+    padding: 0.25rem 1rem;
+}
+
+.return_exercises a {
+    color: white;
+}
+
+.submit {
+    background-color: #E14F75;
+    padding: 0.25rem 1rem;
+    border: 1px solid black;
+    border-radius: 9rem;
 }
