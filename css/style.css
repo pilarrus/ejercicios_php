@@ -1,54 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
-}
-
 .content {
     position: relative;
 }
 
-h1 {
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-}
-
 /*.center {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    border: 1px solid orange;
+    margin: 0 auto;
 }*/
 
-.index {
-    border: 1px solid black;
-    margin: 3px;
-    padding: 5px;
-    background: #38b3dc;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-    margin: 10px;
-}
-
-.multiplicationTable {
-    display: inline;
-    border: none;
-}
 
 .exercise2 {
     top: 350px;
@@ -60,8 +18,4 @@ table, th, td {
 
 .form {
     margin-top: 15 px;
-}
-
-button {
-    background-color: #f77a1d;
 }

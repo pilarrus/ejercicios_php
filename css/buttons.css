@@ -1,6 +1,16 @@
 .index {
+    width: 90px;
     border: 1px solid black;
     margin: 3px;
     padding: 5px;
     background: #38b3dc;
+}
+
+.index a {
+    text-decoration: none;
+    color: white;
+}
+
+.volver_ejercicios {
+    background-color: #f77a1d;
 }

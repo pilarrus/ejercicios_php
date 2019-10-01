@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio 3 - Pilar</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/posicionamiento.css">
+    <link rel="stylesheet" href="../../css/tables.css">
 </head>
 <body>
-    <button>
+    <button class="volver_ejercicios">
         <a href="../../index.php">Volver a Ejercicios</a>
     </button>
     <div class="center">
