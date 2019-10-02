@@ -16,43 +16,43 @@
 
     <div class="row">
         <div class="col_1_of_2">
-            <h2>Tema 2</h2>
+            <h2>Tema 2 - Fundamentos del lenguaje</h2>
             <div class="exercise">
-                <a href="tema2/php/ejercicio1.php">Ejercicio 1</a>
+                <a href="tema2/php/ejercicio1.php">Ejercicio 1 - Mostar cajas con temperaturas superiores a 4</a>
             </div>
             <div class="exercise">
-                <a href="tema2/php/ejercicio2.php">Ejercicio 2</a>
+                <a href="tema2/php/ejercicio2.php">Ejercicio 2 - Visualizar tablas de multiplicar</a>
             </div>
             <div class="exercise">
-                <a href="tema2/php/ejercicio3.php">Ejercicio 3</a>
+                <a href="tema2/php/ejercicio3.php">Ejercicio 3 - Visualizar tablas de multiplicar con NEWDOC y HEREDOC</a>
             </div>
             <div class="exercise">
-                <a href="tema2/html/ejercicio4.html">Ejercicio 4</a>
+                <a href="tema2/html/ejercicio4.html">Ejercicio 4 - Enlazar a tablas de multiplicar</a>
             </div>
             <div class="exercise">
-                <a href="tema2/html/ejercicio5.html">Ejercicio 5</a>
+                <a href="tema2/html/ejercicio5.html">Ejercicio 5 - Formulario que pide nº de tabla a Visualizar</a>
             </div>
             <div class="exercise">
-                <a href="tema2/html/ejercicio6.html">Ejercicio 6</a>
+                <a href="tema2/html/ejercicio6.html">Ejercicio 6 - URL con tabla del 5 por defecto</a>
             </div>
         </div>
 
         <div class="col_1_of_2">
-            <h2>Tema 3</h2>
+            <h2>Tema 3 - Formularios PHP</h2>
             <div class="exercise">
-                <a href="tema3/php/ejercicio1.php">Ejercicio 1</a>
+                <a href="tema3/php/ejercicio1.php">Ejercicio 1 - Juego verbos irregulares</a>
             </div>
             <div class="exercise">
-                <a href="tema3/html/control_de_acceso.html">Ejercicio 2</a>
+                <a href="tema3/html/control_de_acceso.html">Ejercicio 2 - Control de acceso</a>
             </div>
             <div class="exercise">
-                <a href="tema3/html/registro.html">Ejercicio 3</a>
+                <a href="tema3/html/registro.html">Ejercicio 3 - Login</a>
             </div>
             <div class="exercise">
-                <a href="tema3/html/ejercicio4.html">Ejercicio 4</a>
+                <a href="tema3/html/ejercicio4.html">Ejercicio 4 - Textarea</a>
             </div>
             <div class="exercise">
-                <a href="tema3/php/ejercicio5.php">Ejercicio 5</a>
+                <a href="tema3/php/ejercicio5.php">Ejercicio 5 - Controlar entrada</a>
             </div>
         </div>
     </div>
