@@ -43,7 +43,7 @@
                 <a href="tema3/php/ejercicio1.php">Ejercicio 1 - Juego verbos irregulares</a>
             </div>
             <div class="exercise">
-                <a href="tema3/html/control_de_acceso.html">Ejercicio 2 - Control de acceso</a>
+                <a href="tema3/php/control_de_acceso_array.php">Ejercicio 2 - Control de acceso</a>
             </div>
             <div class="exercise">
                 <a href="tema3/html/registro.html">Ejercicio 3 - Login</a>
