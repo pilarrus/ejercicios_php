@@ -46,7 +46,7 @@
                 <a href="tema3/php/control_de_acceso_array.php">Ejercicio 2 - Control de acceso</a>
             </div>
             <div class="exercise">
-                <a href="tema3/html/registro.html">Ejercicio 3 - Login</a>
+                <a href="tema3/php/ejercicio3.php">Ejercicio 3 - Login</a>
             </div>
             <div class="exercise">
                 <a href="tema3/html/ejercicio4.html">Ejercicio 4 - Textarea</a>
