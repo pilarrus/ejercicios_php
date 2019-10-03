@@ -1,7 +1,7 @@
 <?php
 
     function button_return_exercises_html(){
-        return <<<AAA
+        echo <<<AAA
         <button class="return_exercises">
             <a href="../../index.php">Volver a Ejercicios</a>
         </button>
@@ -9,7 +9,7 @@ AAA;
     }
 
     function cabezera_html($exercise) {
-        return <<<AAA
+        echo <<<AAA
         <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -29,9 +29,9 @@ AAA;
     // Tema 3, ejercicio 2
     function control_de_acceso($users, $user, $password) {
         if(isset($users[$user]) && $password === $users[$user][0]) {
-            return "<p>Bienvenid@ " . $users[$user][1] . "</p>\n";
+            echo "<p>Bienvenid@ " . $users[$user][1] . "</p>\n";
         } else {
-            return "<p>Acceso no autorizado</p>\n";
+            echo "<p>Acceso no autorizado</p>\n";
         }
     }
 
@@ -43,21 +43,21 @@ AAA;
             $variable = htmlspecialchars($variable, ENT_QUOTES, "UTF-8"); //Convierte caracteres especiales en entidades HTML
             $variable = trim($variable); //Elimina espacios que haya al principio y al final
         } else {
-            $variable = "eee";
+            $variable = "";
         }
         return $variable;
     }
 
     // Tema 3, ejercicio 2
-    function pintar_control_acceso_html($exercise, $PHP_SELF) {
-        $cabezera = cabezera_html($exercise);
-        $cuerpo = <<<AAA
+    function pintar_control_acceso_html($exercise) {
+        cabezera_html($exercise);
+        echo <<<AAA
         <body>
             <button class="return_exercises">
                 <a href="../../index.php">Volver a Ejercicios</a>
             </button>
             <div class="center">
-                <form action="$_SERVER[$PHP_SELF]" method="post" class="form_choose_table">
+                <form action="$_SERVER[PHP_SELF]" method="post" class="form_choose_table">
                     <div class="center">
                         <label for="">Usuario</label>
                         <input type="text" name="usuario" required/>
@@ -74,6 +74,34 @@ AAA;
         </body>
         </html>
 AAA;
-        return $cabezera. $cuerpo;
+    }
+
+    function pintar_formulario_registro($exercise) {
+
+    }
+
+    function registro() {
+        echo "<h2>Datos personales</h2>";
+        echo "<p>Nombre: " . $_POST['nombre'] . "</p>\n";
+        
+        echo ($_POST['sexo'] === 'H') ? "<p>Sexo: Hombre</p>\n" : "<p>Sexo: Mujer</p>\n";
+
+        echo "<p>Idiomas: ";
+        foreach($_POST['idiomas'] as $idioma) {
+            echo $idioma . ", ";
+        }
+        echo "</p>\n";
+        
+        echo "<p>Nacionalidades: ";
+        foreach($_POST['nacionalidades'] as $nacionalidad) {
+            echo $nacionalidad . ", ";
+        }
+        echo "</p>\n";
+
+        echo "<p>Aficiones: ";
+        foreach($_POST['aficiones'] as $aficion) {
+            echo $aficion . ", ";
+        }
+        echo "</p>\n";
     }
 ?>
