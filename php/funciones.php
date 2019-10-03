@@ -77,7 +77,60 @@ AAA;
     }
 
     function pintar_formulario_registro($exercise) {
-
+        cabezera_html();
+        echo "<body>\n";
+        button_return_exercises_html();
+        echo <<<AAA
+        <div class="center">
+            <form action="../php/ejercicio3.php" method="post" class="loggin">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                    
+                </div>
+                <div>
+                    <label for="">Sexo:</label>
+                    <input type="radio" name="sexo" value="H" checked/>Hombre
+                    <input type="radio" name="sexo" value="M"/>Mujer
+                </div>
+                <div>
+                    <label for="">Idiomas:</label>
+                    <input type="checkbox" name="idiomas[]" id="" value="Inglés">Inglés
+                    <input type="checkbox" name="idiomas[]" id="" value="Francés">Francés
+                    <input type="checkbox" name="idiomas[]" id="" value="Español" checked>Español
+                    <input type="checkbox" name="idiomas[]" id="" value="Italiano">Italiano
+                    <input type="checkbox" name="idiomas[]" id="" value="Portugués">Portugués
+                </div>
+                <div>
+                    <label for="nacionalidades">Nacionalidades:</label><br>
+                    <select name="nacionalidades[]" id="nacionalidades" multiple="multiple" required>
+                        <optgroup label="Elige las nacionalidades que tienes">
+                            <option value="Francesa">Francesa</option>
+                            <option value="Española">Española</option>
+                            <option value="Italiana">Italiana</option>
+                            <option value="Portuguesa">Portuguesa</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="aficiones">Aficiones:</label><br>
+                    <select name="aficiones[]" id="aficiones" multiple="multiple" required>
+                        <optgroup label="Elige las aficiones que te gusten">
+                            <option value="Hacer deporte">Hacer deporte</option>
+                            <option value="Leer">Leer</option>
+                            <option value="Estar con amigos">Estar con amigos</option>
+                            <option value="Ver peliculas">Ver peliculas</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="center">
+                    <input type="submit" name="submit" value="Enviar" class="submit">
+                </div>
+            </form>
+        </div>
+    </body>
+    </html>
+AAA;
     }
 
     function registro() {

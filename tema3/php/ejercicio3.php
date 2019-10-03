@@ -19,7 +19,8 @@
     if(isset($_POST['submit'])) {
         registro();
     } else {
-        header("Location: ../html/registro.html");
+        //header("Location: ../html/registro.html");
+        pintar_formulario_registro('Ejercicio 3');
     }
 ?>
 
