@@ -8,7 +8,6 @@
         }
     }
 
-    // Tema 3, ejercicio 5
     function controla_entrada($variable) {
         if(isset($variable)) {
             $variable = strip_tags($variable); //Elimina etiquetas HTML y PHP
@@ -74,6 +73,31 @@ AAA;
                     </div>
                     <div class="center">
                         <input type="submit" name="submit" class="submit"/>
+                    </div>
+                </form>
+            </div>
+        </body>
+        </html>
+AAA;
+    }
+
+    function pintar_formulario_control_entrada($exercise) {
+        pintar_cabezera_html($exercise);
+        echo "<body>\n";
+        pintar_button_return_exercises_html();
+        echo <<<AAA
+            <div class="center">
+                <form action="$_SERVER[PHP_SELF]" method="post" class="cite">
+                    <div>
+                        <label for="">Aristóteles (filósofo griego) dijo:</label><br>
+                        <textarea name="aristoteles" rows="5" cols="50">” La amistad es un alma que habita en dos cuerpos; un corazón que habita en dos almas.”</textarea>
+                    </div>
+                    <div>
+                        <label for="">Y Miguel de Cervantes citó:</label><br>
+                        <textarea name="cervantes" rows="5" cols="50">“Confía en el tiempo, que suele dar dulces salidas a muchas amargas dificultades”</textarea>
+                    </div>
+                    <div class="center">
+                        <input type="submit" name="submit" value="Enviar" class="submit">
                     </div>
                 </form>
             </div>
@@ -171,22 +195,8 @@ AAA;
         
         echo ($_POST['sexo'] === 'H') ? "<p>Sexo: Hombre</p>\n" : "<p>Sexo: Mujer</p>\n";
 
-        echo "<p>Idiomas: ";
-        foreach($_POST['idiomas'] as $idioma) {
-            echo $idioma . ", ";
+        foreach($xs as $x) {
+            pintar_p($x);
         }
-        echo "</p>\n";
-        
-        echo "<p>Nacionalidades: ";
-        foreach($_POST['nacionalidades'] as $nacionalidad) {
-            echo $nacionalidad . ", ";
-        }
-        echo "</p>\n";
-
-        echo "<p>Aficiones: ";
-        foreach($_POST['aficiones'] as $aficion) {
-            echo $aficion . ", ";
-        }
-        echo "</p>\n";
     }
 ?>

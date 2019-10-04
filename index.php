@@ -49,11 +49,11 @@
                 <a href="tema3/php/ejercicio3.php">Ejercicio 3 - Login</a>
             </div>
             <div class="exercise">
-                <a href="tema3/html/ejercicio4.html">Ejercicio 4 - Textarea</a>
+                <a href="tema3/php/ejercicio4.php">Ejercicio 4 - Textarea-Controlar entrada</a>
             </div>
-            <div class="exercise">
-                <a href="tema3/php/ejercicio5.php">Ejercicio 5 - Controlar entrada</a>
-            </div>
+            <!--<div class="exercise">
+                <a href="tema3/php/ejercicio.php">Ejercicio 5 - Controlar entrada</a>
+            </div>-->
         </div>
     </div>
     <div class="row">
