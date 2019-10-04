@@ -75,7 +75,7 @@
         <div class="col_1_of_2">
             <h2>Tema 5 - Upload</h2>
             <div class="exercise">
-                <a href="tema3/1_subir_ficheros.php">Ejercicio 1 - Subir ficheros</a>
+                <a href="tema5/1_subir_ficheros.php">Ejercicio 1 - Subir ficheros</a>
             </div>
             <div class="exercise">
                 <a href="#">Ejercicio 1</a>

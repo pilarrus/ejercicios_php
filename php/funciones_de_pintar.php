@@ -8,6 +8,14 @@
 AAA;
     }
 
+    function paint_button_submit() {
+        echo <<<AAA
+        <div class="center">
+            <input type="submit" name="submit" class="submit"/>
+        </div>
+AAA;
+    }
+
     function pintar_cabecera_html($exercise, $css) {
         echo <<<AAA
         <!DOCTYPE html>
