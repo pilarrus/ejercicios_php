@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/forms.css">
-    <link rel="stylesheet" href="../css/posicionamiento.css">
+    <link rel="stylesheet" href="../css/positions.css">
 </head>
 <body>
     <button class="return_exercises">

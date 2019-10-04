@@ -26,7 +26,6 @@
                     <div>
                         <label for="nombre">Nombre</label>
                         <input type="text" name="nombre" id="nombre" required>
-                        
                     </div>
                     <div>
                         <label for="">Sexo:</label>
@@ -85,7 +84,7 @@ AAA;
         echo "<body>\n";
         pintar_button_return_exercises_html();
 
-        echo "<h2>Datos personales</h2>";
+        echo "<h2>Datos personales</h2>\n";
         echo "<p>Nombre: $_POST[nombre]</p>\n";
         
         echo ($_POST['sexo'] === 'H') ? "<p>Sexo: Hombre</p>\n" : "<p>Sexo: Mujer</p>\n";
@@ -94,8 +93,8 @@ AAA;
             pintar_p_registro($x);
         }
 
-        echo "</body>";
-        echo "</html>";
+        echo "</body>\n";
+        echo "</html>\n";
     }
 
 ?>

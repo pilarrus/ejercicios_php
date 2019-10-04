@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/buttons.css">
-    <link rel="stylesheet" href="../../css/posicionamiento.css">
+    <link rel="stylesheet" href="../../css/positions.css">
     <link rel="stylesheet" href="../../css/tables.css">
 </head>
 <body>

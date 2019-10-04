@@ -18,7 +18,7 @@
         echo "</body>\n";
         echo "</html>\n";
     } else {
-        $css = ["style", "base", "buttons", "forms", "posicionamiento"];
+        $css = ["style", "base", "buttons", "forms", "positions"];
         pintar_control_acceso_html('Ejercicio2', $css);
     }
 ?>

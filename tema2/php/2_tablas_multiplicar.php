@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/buttons.css">
-    <link rel="stylesheet" href="../../css/posicionamiento.css">
+    <link rel="stylesheet" href="../../css/positions.css">
     <link rel="stylesheet" href="../../css/tables.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
     <?php
 
         define("NUMTABLAS", 3);
-        for($cont=1; $cont <= NUMTABLAS; $cont++){
+        for($cont = 1; $cont <= NUMTABLAS; $cont++){
             echo "<table class='multiplicationTable'>\n";
             echo "<tr>\n";
             echo "<th>Tabla del $cont :</th>\n";

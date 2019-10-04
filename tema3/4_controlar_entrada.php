@@ -19,7 +19,7 @@
 AAA;
 
     } else {
-        $css = ["style", "base", "buttons", "forms", "posicionamiento"];
+        $css = ["style", "base", "buttons", "forms", "positions"];
         pintar_formulario_control_entrada('Ejercicio 4', $css);
     }
 ?>

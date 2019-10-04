@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/buttons.css">
-    <link rel="stylesheet" href="../../css/posicionamiento.css">
+    <link rel="stylesheet" href="../../css/positions.css">
     <link rel="stylesheet" href="../../css/tables.css">
 </head>
 <body>
@@ -17,27 +17,25 @@
     </button>
     
     <div class="center">
-    <table>
-        <?php 
+            <?php 
 
-        if (isset($_GET['table']) && is_numeric($_GET['table'])) {
-            $num = $_GET['table'];
-            echo "<table class='multiplicationTable'>\n";
-            echo "<tr>\n";
-            echo "<th>Tabla del $num</th>\n";
-            echo "</tr>\n";
-            for($i = 0; $i < 11; $i++) {
+            if (isset($_GET['table']) && is_numeric($_GET['table'])) {
+                $num = $_GET['table'];
+                echo "<table class='multiplicationTable'>\n";
                 echo "<tr>\n";
-                echo "<th>$i x $num = " . $i*$num . "</th>\n";
+                echo "<th>Tabla del $num</th>\n";
                 echo "</tr>\n";
+                for($i = 0; $i < 11; $i++) {
+                    echo "<tr>\n";
+                    echo "<th>$i x $num = " . $i*$num . "</th>\n";
+                    echo "</tr>\n";
+                }
+                echo "</table>\n";
+            } else {
+                echo "<p>ERROR</p>";
             }
-            echo "</table>\n";
-        } else {
-            echo "<p>ERROR</p>";
-        }
-        
-        ?>
-    </table>
+            
+            ?>
     </div>
 </body>
 </html>
