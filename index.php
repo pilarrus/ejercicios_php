@@ -40,20 +40,20 @@
         <div class="col_1_of_2">
             <h2>Tema 3 - Formularios PHP</h2>
             <div class="exercise">
-                <a href="tema3/php/ejercicio1.php">Ejercicio 1 - Juego verbos irregulares</a>
+                <a href="tema3/1_verbos_irregulares.php">Ejercicio 1 - Juego verbos irregulares</a>
             </div>
             <div class="exercise">
-                <a href="tema3/php/control_de_acceso_array.php">Ejercicio 2 - Control de acceso</a>
+                <a href="tema3/2_control_acceso.php">Ejercicio 2 - Control de acceso</a>
             </div>
             <div class="exercise">
-                <a href="tema3/php/ejercicio3.php">Ejercicio 3 - Login</a>
+                <a href="tema3/3_login.php">Ejercicio 3 - Login</a>
             </div>
             <div class="exercise">
-                <a href="tema3/php/ejercicio4.php">Ejercicio 4 - Textarea-Controlar entrada</a>
+                <a href="tema3/4_controlar_entrada.php">Ejercicio 4 - Textarea-Controlar entrada</a>
             </div>
-            <!--<div class="exercise">
-                <a href="tema3/php/ejercicio.php">Ejercicio 5 - Controlar entrada</a>
-            </div>-->
+            <div class="exercise">
+                <a href="tema3/5_subir_ficheros.php">Ejercicio 5 - Subir ficheros</a>
+            </div>
         </div>
     </div>
     <div class="row">
