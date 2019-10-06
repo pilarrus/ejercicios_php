@@ -1,5 +1,5 @@
 <?php
-    //require("../php/funciones.php");
+    require("../php/funciones.php");
     require("../php/funciones_de_pintar.php");
     require("php/functions_upload_files.php");
 
@@ -8,16 +8,17 @@
     if (isset($_POST['submit'])) {
         //print_r($_FILES);
         //echo $_FILES['file']['name'];
-        $tmp_name = $_FILES['file']['tmp_name'];
+        /*$tmp_name = $_FILES['file']['tmp_name'];
         if (is_uploaded_file($tmp_name)) {
             //echo "El fichero ha subido";
             $_FILES['file']['name'] = md5_file($tmp_name) . time();
             //echo $tmp_name;
             $destination  = dirname(__FILE__) . "/../files";
-            
+            echo $destination;
             if (is_dir($destination)) {
                 //echo "El directorio existe";
-                $name = basename($_FILES["file"]["name"]);
+                $name = $_FILES["file"]["name"];
+                //echo $name;
                 if (move_uploaded_file($tmp_name, $destination . "/" . $name)) {
                     echo "El fichero ha sido movido";
                 } else {
@@ -28,7 +29,9 @@
             }
         } else {
             echo "ERROR. No se ha subido fichero";
-        }
+        }*/
+        $relativeDirectory = "/../files";
+        upload_file($relativeDirectory);
     } else {
         paint_form_upload_files('Ejercicio 1', $css);
     }
