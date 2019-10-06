@@ -27,7 +27,7 @@
             $_FILES['file']['name'] = md5_file($tmp_name) . time();
             //echo $tmp_name;
             $destination  = dirname(__FILE__) . $relativeDirectory;
-            echo $destination;
+            //echo $destination;
             if (is_dir($destination)) {
                 //echo "El directorio existe";
                 $name = $_FILES["file"]["name"];
