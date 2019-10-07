@@ -10,8 +10,8 @@
             <form action="$_SERVER[PHP_SELF]" method="post" enctype="multipart/form-data" class="form_border form_padding">
             <p>Selecciona el archivo que quieres subir</p>    
             <div class="center">
-                    <input type="file" name="file" id="file">
-                </div>
+                <input type="file" name="file" id="file">
+            </div>
 AAA;
             paint_button_submit();
             echo <<<AAA

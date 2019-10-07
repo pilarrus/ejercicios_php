@@ -78,7 +78,7 @@
                 <a href="tema5/1_subir_ficheros.php">Ejercicio 1 - Subir ficheros</a>
             </div>
             <div class="exercise">
-                <a href="#">Ejercicio 1</a>
+                <a href="tema5/2_CV.php">Ejercicio 2 - Curriculum Vitae con foto</a>
             </div>
             <div class="exercise">
                 <a href="#">Ejercicio 2</a>
