@@ -6,6 +6,7 @@ function paint_CV($exercise, $css) {
     pintar_button_return_exercises_html();
     //upload_file($relativeDirectory);
     echo "Estoy en el if";
+    print_r($_POST);
     echo "</body>\n";
     echo "</html>\n";
 }
@@ -23,6 +24,8 @@ AAA;
             paint_address_form();
             paint_work_experience_form();
             paint_education_form();
+            paint_languages_form();
+            paint_ofimatica_form();
             paint_button_submit();
             
             echo <<<AAA
@@ -32,5 +35,23 @@ AAA;
 </html>
 AAA;
 }
+
+/*function paint_ofimatica_form() {
+    $office = ["Word", "Excel", "Paint"];
+    echo <<<AAA
+        <fieldset>
+            <legend>Ofimática</legend>
+            <div>
+                <select name="ofimatica[]" id="ofimatica" multiple="multiple">
+                    <optgroup label="Elige las que tienes experiencia">
+AAA;
+                pintar_options($office);
+            echo <<<AAA
+            </optgroup>
+        </select>
+            </div>
+        </fieldset>
+AAA;
+}*/
 
 ?>

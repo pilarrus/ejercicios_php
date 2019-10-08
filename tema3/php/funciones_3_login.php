@@ -2,7 +2,7 @@
     require("../php/funciones.php");
     require("../php/funciones_de_pintar.php");
 
-    function pintar_checkbox($xs) {
+    /*function pintar_checkbox($xs) {
         foreach($xs as $x) {
             if($x == "Español"){
                 echo "<input type=\"checkbox\" name=\"idiomas[]\" value=\"$x\" checked>$x";
@@ -10,7 +10,7 @@
                 echo "<input type=\"checkbox\" name=\"idiomas[]\" value=\"$x\">$x";
             }
         }
-    }
+    }*/
 
     function pintar_formulario_registro($exercise, $css) {
         $idiomas = ["Inglés", "Francés", "Español", "Italiano", "Portugués"];

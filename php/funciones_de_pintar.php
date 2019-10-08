@@ -52,7 +52,7 @@ AAA;
             <legend>Contacto</legend>
             <div>
                 <label for="">Teléfono:</label>
-                <input type="tel" name="tfno">
+                <input type="tel" name="tfno" maxlength="9" minlegth="9">
             </div>
             <div>
                 <label for="">E-mail:</label>
@@ -60,6 +60,16 @@ AAA;
             </div>
         </fieldset>
 AAA;
+    }
+
+    function pintar_checkbox($xs) {
+        foreach($xs as $x) {
+            if($x == "Español"){
+                echo "<input type=\"checkbox\" name=\"idiomas[]\" value=\"$x\" checked>$x";
+            } else {
+                echo "<input type=\"checkbox\" name=\"idiomas[]\" value=\"$x\">$x";
+            }
+        }
     }
 
     function paint_education_form() {
@@ -73,6 +83,21 @@ AAA;
         </fielset>
 AAA;
     }
+    
+function paint_languages_form() {
+    $idiomas = ["Inglés", "Francés", "Español", "Italiano", "Portugués"];
+    
+    echo <<<AAA
+        <fielset>
+            <legend>Idiomas</legend>
+            <div>
+AAA;
+                pintar_checkbox($idiomas);
+            echo <<<AAA
+            </div>
+        </fielset>
+AAA;
+}
 
     function pintar_links_css($nombres) {
         foreach($nombres as $nombre) {
@@ -104,6 +129,24 @@ AAA;
 AAA;
     }
 
+    function paint_ofimatica_form() {
+        $office = ["Word", "Excel", "Paint"];
+        echo <<<AAA
+            <fieldset>
+                <legend>Ofimática</legend>
+                <div>
+                    <select name="ofimatica[]" id="ofimatica" multiple="multiple">
+                        <optgroup label="Elige las que tienes experiencia">
+AAA;
+                    pintar_options($office);
+                echo <<<AAA
+                </optgroup>
+            </select>
+                </div>
+            </fieldset>
+AAA;
+    }
+
     function pintar_options($xs) {
         foreach($xs as $x) {
             echo "<option value=\"$x\">$x</option>\n";
@@ -116,7 +159,7 @@ AAA;
             <legend>Experiencia laboral</legend>
             <div>
                 <!--<label>Introduce la experiencia laboral que tienes:</label>-->
-                <textarea name="work" rows="10" cols="50">Write something here</textarea>
+                <textarea name="works" rows="10" cols="50">Write something here</textarea>
             </div>
         </fielset>
 AAA;
