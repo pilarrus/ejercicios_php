@@ -20,13 +20,13 @@
         return $variable;
     }
 
-    function upload_file($relativeDirectory) {
+    function upload_file() {
         $tmp_name = $_FILES['file']['tmp_name'];
         if (is_uploaded_file($tmp_name)) {
             //echo "El fichero ha subido";
             $_FILES['file']['name'] = md5_file($tmp_name) . time();
             //echo $tmp_name;
-            $destination  = dirname(__FILE__) . $relativeDirectory;
+            $destination  = dirname(__FILE__) . "/../files";
             //echo $destination;
             if (is_dir($destination)) {
                 //echo "El directorio existe";
@@ -47,9 +47,8 @@
 
     function upload_file_gif_jpeg() {
         $type = $_FILES['file']['type'];
-        $resp = preg_match("/gif$/", $type) || preg_match("/jpeg$/", $type);
+        $resp = preg_match("/gif$/i", $type) || preg_match("/jpeg$/i", $type);
         return $resp;
-
     }
 
 ?>

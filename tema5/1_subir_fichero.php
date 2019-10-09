@@ -6,12 +6,10 @@
     $css = ["base", "style", "buttons", "forms", "positions"];
 
     if (isset($_POST['submit'])) {
-        //print_r($_FILES);
-        $relativeDirectory = "/../files";
         pintar_cabecera_html('Ejercicio 1', $css);
         echo "<body>\n";
         pintar_button_return_exercises_html();
-        upload_file($relativeDirectory);
+        upload_file();
         echo "</body>\n";
         echo "</html>\n";
     } else {

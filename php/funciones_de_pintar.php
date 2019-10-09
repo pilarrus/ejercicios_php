@@ -136,7 +136,7 @@ AAA;
                 <legend>Ofimática</legend>
                 <div>
                     <select name="ofimatica[]" id="ofimatica" multiple="multiple">
-                        <optgroup label="Elige las que tienes experiencia">
+                        <optgroup label="Tienes experiencia en">
 AAA;
                     pintar_options($office);
                 echo <<<AAA
