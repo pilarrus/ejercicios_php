@@ -45,4 +45,11 @@
         }
     }
 
+    function upload_file_gif_jpeg() {
+        $type = $_FILES['file']['type'];
+        $resp = preg_match("/gif$/", $type) || preg_match("/jpeg$/", $type);
+        return $resp;
+
+    }
+
 ?>
