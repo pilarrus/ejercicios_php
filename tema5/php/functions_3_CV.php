@@ -4,7 +4,11 @@ function paint_CV($exercise, $css) {
     pintar_cabecera_html($exercise, $css);
     echo "<body>\n";
     pintar_button_return_exercises_html();
-    upload_file();
+    if (upload_file_gif_jpeg()) {
+        upload_file();
+    } else {
+        echo "El fichero no se puede mover porque no tiene extensión .gif, ni .jpeg";
+    }
     echo "<br>";
     /*print_r($_POST);
     echo "<br>";*/

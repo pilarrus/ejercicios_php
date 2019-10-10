@@ -24,13 +24,19 @@
         $tmp_name = $_FILES['file']['tmp_name'];
         if (is_uploaded_file($tmp_name)) {
             //echo "El fichero ha subido";
-            $_FILES['file']['name'] = md5_file($tmp_name) . time();
+            //$_FILES['file']['name'] = md5_file($tmp_name) .date('dmy') . time();
+            $name = md5_file($tmp_name) .date('dmy') . time();
+            /*$pre_name = $tmp_name . date('dmy') . time();
+            echo $pre_name;
+            $name = md5_file($pre_name);
+            echo $name;*/
+            //echo $_FILES['file']['name'];
             //echo $tmp_name;
             $destination  = dirname(__FILE__) . "/../files";
             //echo $destination;
             if (is_dir($destination)) {
                 //echo "El directorio existe";
-                $name = $_FILES["file"]["name"];
+                //$name = $_FILES["file"]["name"];
                 //echo $name;
                 if (move_uploaded_file($tmp_name, $destination . "/" . $name)) {
                     echo "El fichero ha sido movido";
