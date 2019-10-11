@@ -1,5 +1,4 @@
 <?php
-    //require("../../php/funciones_de_pintar");
 
     function paint_form_upload_files($exercise, $css) {
         pintar_cabecera_html($exercise, $css);

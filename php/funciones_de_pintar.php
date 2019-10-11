@@ -78,7 +78,7 @@ AAA;
             <legend>Formación</legend>
             <div>
                 <!--<label>Introduce la formación que tienes:</label>-->
-                <textarea name="education" rows="10" cols="50">Write something here</textarea>
+                <textarea name="education" rows="10" cols="50"></textarea>
             </div>
         </fielset>
 AAA;
@@ -114,8 +114,12 @@ AAA;
                 <input type="text" name="name">
             </div>
             <div>
-                <label for="">Apellidos:</label>
-                <input type="text" name="surnames">
+                <label for="">Primer apellido:</label>
+                <input type="text" name="first_surname">
+            </div>
+            <div>
+                <label for="">Segundo apellido:</label>
+                <input type="text" name="second_surname">
             </div>
             <div>
                 <label for="">Edad:</label>
@@ -159,7 +163,7 @@ AAA;
             <legend>Experiencia laboral</legend>
             <div>
                 <!--<label>Introduce la experiencia laboral que tienes:</label>-->
-                <textarea name="works" rows="10" cols="50">Write something here</textarea>
+                <textarea name="works" rows="10" cols="50"></textarea>
             </div>
         </fielset>
 AAA;

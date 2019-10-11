@@ -20,16 +20,17 @@
         return $variable;
     }
 
-    function upload_file() {
+    function upload_file($namePerson, $first_surname, $second_surname) {
         $tmp_name = $_FILES['file']['tmp_name'];
         if (is_uploaded_file($tmp_name)) {
             //echo "El fichero ha subido";
-            //$_FILES['file']['name'] = md5_file($tmp_name) .date('dmy') . time();
-            $name = md5_file($tmp_name) .date('dmy') . time();
-            /*$pre_name = $tmp_name . date('dmy') . time();
-            echo $pre_name;
-            $name = md5_file($pre_name);
-            echo $name;*/
+            $name = "";
+            if(isset($namePerson) && isset($first_surname) && isset($second_surname)) {
+                $name = $namePerson . "_" . $first_surname . "_" . $second_surname . "_";
+                //echo $name;
+            }
+            $name .= md5_file($tmp_name) .date('dmy') . time();
+            //echo $name;
             //echo $_FILES['file']['name'];
             //echo $tmp_name;
             $destination  = dirname(__FILE__) . "/../files";

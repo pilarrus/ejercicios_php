@@ -6,7 +6,7 @@ require("php/functions_3_CV.php");
 $css = ["base", "style", "buttons", "forms", "positions"];
 
 if (isset($_POST['submit'])) {
-    paint_CV('Ejercicio 3', $css);
+    paint_CV('Ejercicio 3', $css, $_POST['name'], $_POST['first_surname'], $_POST['second_surname']);
 } else {
     paint_form_CV('Ejercicio 3', $css);
 }
