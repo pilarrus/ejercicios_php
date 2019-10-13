@@ -27,20 +27,14 @@
             $name = "";
             if(isset($namePerson) && isset($first_surname) && isset($second_surname)) {
                 $name = $namePerson . "_" . $first_surname . "_" . $second_surname . "_";
-                //echo $name;
             }
             $name .= md5_file($tmp_name) .date('dmy') . time();
-            //echo $name;
-            //echo $_FILES['file']['name'];
-            //echo $tmp_name;
             $destination  = dirname(__FILE__) . "/../files";
-            //echo $destination;
+            //echo $name . " " . $destination;
             if (is_dir($destination)) {
                 //echo "El directorio existe";
-                //$name = $_FILES["file"]["name"];
-                //echo $name;
                 if (move_uploaded_file($tmp_name, $destination . "/" . $name)) {
-                    echo "El fichero ha sido movido";
+                    echo "El fichero se ha guardado con éxito";
                 } else {
                     echo "ERROR. El fichero NO ha sido movido. No es un archivo cargado válido";
                 }
@@ -53,9 +47,14 @@
     }
 
     function upload_file_gif_jpeg() {
-        $type = $_FILES['file']['type'];
-        $resp = preg_match("/gif$/i", $type) || preg_match("/jpeg$/i", $type);
-        return $resp;
+        $tmp_name = $_FILES['file']['tmp_name'];
+        if (is_uploaded_file($tmp_name)) {
+            $type = $_FILES['file']['type'];
+            $resp = preg_match("/gif$/i", $type) || preg_match("/jpeg$/i", $type);
+            return $resp;
+        } else {
+            echo "ERROR. No se ha subido fichero";
+        }
     }
 
 ?>
