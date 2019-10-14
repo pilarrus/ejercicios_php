@@ -26,7 +26,8 @@
             //echo "El fichero ha subido";
             $name = "";
             if(isset($namePerson) && isset($first_surname) && isset($second_surname)) {
-                $name = $namePerson . "_" . $first_surname . "_" . $second_surname . "_";
+                //$name = $namePerson . "_" . $first_surname . "_" . $second_surname . "_";
+                $name = $namePerson . $first_surname . $second_surname;
             }
             $name .= md5_file($tmp_name) .date('dmy') . time();
             $destination  = dirname(__FILE__) . "/../files";
