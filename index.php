@@ -86,6 +86,9 @@
             <div class="exercise">
                 <a href="tema5/4_visualizar_foto.php">Ejercicio 4 - Visualizar imagen de una persona</a>
             </div>
+            <div class="exercise">
+                <a href="tema5/5_tratamiento_pdf.php">Ejercicio 5 - Tratamiento de PDF</a>
+            </div>
         </div>
     </div>
     
