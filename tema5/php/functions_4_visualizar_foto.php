@@ -38,30 +38,32 @@ function paint_image($exercise, $css) {
 
     $direction = "../files/";
     $images = scandir($direction);
-
-    $resp = false;
-    foreach($images as $image) {
-        if(preg_match($regex, $image)) {
-            $file = $direction . $image;
-            echo "<img src=$file alt=\"image\">";
-            $resp = true;
-        }
-    }
-    if(!$resp) {
-        echo "<p>La imagen no existe</p>";
-    }
         
-    /*pintar_cabecera_html($exercise, $css);
+    pintar_cabecera_html($exercise, $css);
     echo "<body>";
     pintar_button_return_exercises_html();
     echo <<<AAA
         <div class="center">
-            Estoy en el if, deberia mostrar la/s imagen/es si la/s encuentra.
-            <img src="$file" alt="image">
+            <p>$name $first_surname $second_surname</p>
+        </div>
+        <div class="center">
+AAA;
+    $resp = false;
+    foreach($images as $image) {
+        if(preg_match($regex, $image)) {
+            $file = $direction . $image;
+            echo "<img src=$file alt=\"image\" class=\"photo\">";
+            $resp = true;
+        }
+    }
+    if(!$resp) {
+        echo "<p>No tiene imágenes asociadas</p>";
+    }
+    echo <<<AAA
         </div>
     </body>
     </html>
-AAA;*/
+AAA;
 }
 
 ?>
