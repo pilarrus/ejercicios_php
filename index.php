@@ -53,25 +53,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col_1_of_2">
-            <h2>Tema 4</h2>
-            <div class="exercise">
-                <a href="#">Ejercicio 1</a>
-            </div>
-            <div class="exercise">
-                <a href="#">Ejercicio 2</a>
-            </div>
-            <div class="exercise">
-                <a href="#">Ejercicio 3</a>
-            </div>
-            <div class="exercise">
-                <a href="#">Ejercicio 4</a>
-            </div>
-            <div class="exercise">
-                <a href="#">Ejercicio 5</a>
-            </div>
-        </div>
-        
+                
         <div class="col_1_of_2">
             <h2>Tema 5 - Upload</h2>
             <div class="exercise">
@@ -89,6 +71,16 @@
             <div class="exercise">
                 <a href="tema5/5_tratamiento_pdf.php">Ejercicio 5 - Tratamiento de PDF</a>
             </div>
+        </div>
+
+        <div class="col_1_of_2">
+            <h2>Tema 7 - Tratamiento de cadenas</h2>
+            <div class="exercise">
+                <a href="tema7/1_editor_texto.php">Ejercicio 1 - Editor de texto</a>
+            </div>
+            <!--<div class="exercise">
+                <a href="#">Ejercicio 2</a>
+            </div>-->
         </div>
     </div>
     

@@ -37,3 +37,12 @@ textarea {
 .form_padding {
     padding: 4rem;
 }
+
+.editor {
+    width: 90rem;
+    min-width: 50rem;
+    min-height: 50rem;
+    resize: none;
+    margin: 1rem 10rem;
+    padding: 1rem;
+}

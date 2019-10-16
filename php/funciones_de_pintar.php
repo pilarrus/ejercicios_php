@@ -16,7 +16,7 @@
 AAA;
     }
 
-    function pintar_button_return_exercises_html(){
+    function pintar_button_return_exercises_html() {
         echo <<<AAA
         <button class="return_exercises">
             <a href="../index.php">Volver a Ejercicios</a>
