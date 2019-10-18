@@ -20,6 +20,21 @@
         return $variable;
     }
 
+    function search_position($word, $phrase) {
+        $positions = [];
+        if(strlen($phrase) > 0 && strlen($word) > 0) {
+            $words = explode(" ", $phrase);
+            foreach ($words as $key => $value) {
+                if($value === $word) {
+                    array_push($positions, $key);
+                }
+            }
+            return $positions;
+        } else {
+            return false;
+        }
+    }
+
     function upload_file($namePerson, $first_surname, $second_surname) {
         $tmp_name = $_FILES['file']['tmp_name'];
         if (is_uploaded_file($tmp_name)) {

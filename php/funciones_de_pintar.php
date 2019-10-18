@@ -83,6 +83,15 @@ AAA;
         </fielset>
 AAA;
     }
+
+    function paint_label_input_text($label, $name_input) {
+        echo <<<AAA
+        <div class="center">
+            <label>$label</label>
+            <input type="text" name="$name_input">
+        </div>
+AAA;
+    }
     
 function paint_languages_form() {
     $idiomas = ["Inglés", "Francés", "Español", "Italiano", "Portugués"];

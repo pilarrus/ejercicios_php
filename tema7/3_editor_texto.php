@@ -52,7 +52,7 @@
         echo "<p>Es necesario que introduzcas el texto</p>";
     }
 
-    pintar_cabecera_html('Ejercicio 1 - Editor de texto', $css);
+    pintar_cabecera_html('Ejercicio 3 - Editor de texto', $css);
     echo "<body>";
     pintar_button_return_exercises_html();
     echo <<<AAA
