@@ -2,6 +2,7 @@
     require("../php/funciones.php");
     require("../php/funciones_de_pintar.php");
     require("php/functions_1_buscar_posicion.php");
+    require("php/functions_string.php");
     $css = ["base", "buttons", "forms", "positions", "style"];
 
     if(isset($_POST['submit'])) {
