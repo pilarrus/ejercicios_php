@@ -6,12 +6,36 @@
         pintar_button_return_exercises_html();
         echo <<<AAA
         <div class="center">
-        $funcion
+AAA;
+        $phrase = controla_entrada($_POST['phrase']);
+        $word = controla_entrada($_POST['word']);
+        if (!empty($phrase)) {
+            if (!empty($word)) {
+                $function($phrase, $word);
+            } else {
+                echo "<p>Debes introducir una palabra</p>";
+            }
+        } else {
+            echo "<p>Debes introducir una frase</p>";
+        }
+        echo <<<AAA
         </div>
         </body>
         </html>
 AAA;
     }
+    /*function paint_response($exercise, $css, $funcion){
+        pintar_cabecera_html($exercise, $css);
+        echo "<body>";
+        pintar_button_return_exercises_html();
+        echo <<<AAA
+        <div class="center">
+        $funcion 
+        </div>
+        </body>
+        </html>
+AAA;
+    }*/
 
     function paint_form($exercise, $css) {
         pintar_cabecera_html($exercise, $css);

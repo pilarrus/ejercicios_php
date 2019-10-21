@@ -1,6 +1,6 @@
 <?php
 
-    function paint_positions() {
+    /*function paint_positions() {
         $phrase = controla_entrada($_POST['phrase']);
         $word = controla_entrada($_POST['word']);
         $response = "";
@@ -21,6 +21,20 @@
             }
         } else {
             $response = "<p>Debes introducir una frase</p>";
+        }
+        return $response;
+    }*/
+    function paint_positions($phrase, $word) {
+        $response = "";
+        $positions = search_position($word, $phrase);
+        if($positions != false) {
+            $response .= "<p>La palabra $word está en la posición: ";
+            foreach ($positions as $position) {
+                $response .= $position . ", ";
+            }
+            $response .= "</p>";
+        } else {
+            $response = "<p>No hay ocurrencias de la palabra $word</p>";
         }
         return $response;
     }

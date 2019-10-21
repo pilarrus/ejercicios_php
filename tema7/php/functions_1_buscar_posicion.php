@@ -26,7 +26,18 @@ AAA;
         echo <<<AAA
             <div class="center">
 AAA;
-            echo paint_positions();
+            //echo paint_positions();
+            $phrase = controla_entrada($_POST['phrase']);
+            $word = controla_entrada($_POST['word']);
+            if (!empty($phrase)) {
+                if (!empty($word)) {
+                    echo paint_positions($phrase, $word);
+                } else {
+                    echo "<p>Debes introducir una palabra</p>";
+                }
+            } else {
+                echo "<p>Debes introducir una frase</p>";
+            }
             echo <<<AAA
             </div>
         </body>
