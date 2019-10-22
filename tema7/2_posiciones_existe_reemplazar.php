@@ -6,8 +6,7 @@
     $css = ["base", "buttons", "forms", "positions", "style"];
 
     if (isset($_POST['positions'])) {
-        $funcion = paint_positions();
-        paint_response('Ejercicio 2', $css, $funcion);
+        paint_response('Ejercicio 2', $css, paint_positions(controla_entrada($_POST['phrase']), controla_entrada($_POST['word'])));
 
     } elseif (isset($_POST['exists'])) {
         $funcion = paint_exists();

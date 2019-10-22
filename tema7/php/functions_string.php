@@ -132,7 +132,7 @@
         return false;
     }
 
-    function search_position_array($word, $phrase) {
+    /*function search_position_array($word, $phrase) {
         $positions = [];
         if(strlen($phrase) > 0 && strlen($word) > 0) {
             $words = explode(" ", $phrase);
@@ -145,7 +145,7 @@
         } else {
             return false;
         }
-    }
+    }*/
 
     function paint_replace() {
         $replacer = controla_entrada($_POST['replacer']);

@@ -52,8 +52,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
-                
+    <div class="row">       
         <div class="col_1_of_2">
             <h2>Tema 5 - Upload</h2>
             <div class="exercise">
@@ -83,6 +82,24 @@
             </div>
             <div class="exercise">
                 <a href="tema7/3_editor_texto.php">Ejercicio 3 - Editor de texto</a>
+            </div>
+            <!--<div class="exercise">
+                <a href="#">Ejercicio 2</a>
+            </div>-->
+        </div>
+    </div>
+    <div class="row">       
+        <div class="col_1_of_2">
+            <h2>Tema 8 - Fechas</h2>
+            <div class="exercise">
+                <a href="tema8/1_sacar_fechas.php">Ejercicio 1 - Sacar fechas</a>
+            </div>
+        </div>
+
+        <div class="col_1_of_2">
+            <h2>Tema 9 - </h2>
+            <div class="exercise">
+                <a href="#">Ejercicio 1 - </a>
             </div>
             <!--<div class="exercise">
                 <a href="#">Ejercicio 2</a>
