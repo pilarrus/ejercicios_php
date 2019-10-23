@@ -96,15 +96,15 @@
             </div>
         </div>
 
-        <div class="col_1_of_2">
+        <!--<div class="col_1_of_2">
             <h2>Tema 9 - </h2>
             <div class="exercise">
                 <a href="#">Ejercicio 1 - </a>
             </div>
-            <!--<div class="exercise">
+            <div class="exercise">
                 <a href="#">Ejercicio 2</a>
-            </div>-->
-        </div>
+            </div>
+        </div>-->
     </div>
     
 </body>

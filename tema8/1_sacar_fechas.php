@@ -1,5 +1,5 @@
 <?php
-
+    date_default_timezone_set('Europe/Madrid');
     require("../php/funciones_de_pintar.php");
     $css = ["base", "buttons", "tables", "positions", "style"];
     
@@ -15,11 +15,11 @@
             </tr>
             <tr>
                 <th>Fecha de mañana</th>
-                <td>Llamar función pintar_fecha_de_mañana()</td>
+                <td><?php pintar_fecha_de_mañana() ?></td>
             </tr>
             <tr>
                 <th>Hora de ahora</th>
-                <td>Llamar función pintar_hora_de_ahora()</td>
+                <td><?php pintar_hora_de_ahora() ?></td>
             </tr>
             <tr>
                 <th>Fecha del lunes</th>
@@ -32,14 +32,14 @@
 
 <?php
     function pintar_fecha_de_hoy() {
-        echo date("d-m-y");
+        echo date("d-m-Y");
     }
 
     function pintar_fecha_de_mañana() {
-        
+        echo date("d")+1 . "-" . date("m") . "-" . date("Y");
     }
     function pintar_hora_de_ahora() {
-        
+        echo date("H:i:s");
     }
     function pintar_fecha_del_lunes() {
         
