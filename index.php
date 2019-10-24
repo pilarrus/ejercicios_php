@@ -94,6 +94,9 @@
             <div class="exercise">
                 <a href="tema8/1_sacar_fechas.php">Ejercicio 1 - Sacar fechas</a>
             </div>
+            <div class="exercise">
+                <a href="tema8/2_calendario.php">Ejercicio 2 - Calendario</a>
+            </div>
         </div>
 
         <!--<div class="col_1_of_2">
