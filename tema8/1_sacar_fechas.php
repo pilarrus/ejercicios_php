@@ -36,7 +36,7 @@
     }
 
     function pintar_fecha_de_mañana() {
-        echo date("d")+1 . "-" . date("m") . "-" . date("Y");
+        echo date("d")+1 . date("-m-Y");
     }
     function pintar_hora_de_ahora() {
         echo date("H:i:s");
