@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <th>Fecha del lunes</th>
-                <td>Llamar función pintar_fecha_del_lunes()</td>
+                <td><?php pintar_fecha_del_lunes() ?></td>
             </tr>
         </table>
     </div>
@@ -42,6 +42,12 @@
         echo date("H:i:s");
     }
     function pintar_fecha_del_lunes() {
-        
+        $hoy = date("D");
+        $dias_semana = ["Tue" => 6, "Wed" => 5, "Thu" => 4, "Fri" => 3, "Sat" => 2, "Sun" => 1, "Mon" => 0];
+        foreach($dias_semana as $dia => $value) {
+            if($hoy === $dia) {
+                echo date("d") + $value . date("-m-Y");
+            }
+        }
     }
 ?>
