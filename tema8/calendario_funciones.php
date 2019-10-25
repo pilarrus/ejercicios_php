@@ -5,6 +5,7 @@
         echo <<<AAA
         <div class='center'>
         <table>
+        <tr><td colspan="4">$anio</td></tr>
 AAA;
             for($i = 0; $i < 3; $i++) {
                 echo "<tr>";
@@ -23,20 +24,26 @@ AAA;
     }
 
     function calendario_mensual($anio, $mes) {
-        $meses = ["Enero" => 1, "Febrero" => 2, "Marzo" => 3, "Abril" => 4, "Mayo" => 5, 
-        "Junio" => 6,  "Julio" => 7,  "Agosto" => 8,  "Septiembre" => 9,  "Octubre" => 10,
-        "Noviembre" => 11, "Diciembre" => 12];
+        //setlocale(LC_ALL, 'es_ES');
+        $meses = [1 => "Enero", 2 => "Febrero", 3 => "Marzo", 4 => "Abril", 5 => "Mayo",
+        6 => "Junio", 7 => "Julio", 8 => "Agosto", 9 => "Septiembre", 10 => "Octubre",
+        11 => "Noviembre", 12 => "Diciembre"];
         $dias_semana = ["L", "M", "X", "J", "V", "S", "D"];
-        
-        echo "año: " . $mes . "mes:" . $mes;
+        $dia_actual = new DateTime();
+        echo $dia_actual->format('D');
+        //echo "año: " . $anio . " mes:" . $mes;
         echo <<<AAA
         <div class="center">
             <table>
                 <tr>
-                    <td>$mes</td>
+                    <td colspan="7">$meses[$mes]</td>
                 </tr>
                 <tr>
-                //Un td por cada día de la semana
+AAA;
+                    foreach ($dias_semana as $key => $value) {
+                        echo "<td>$value</td>";
+                    }
+                echo <<<AAA
                 </tr>
             </table>
         </div>
@@ -51,8 +58,6 @@ AAA;
         <div class="center">
             <form action="" method="post" class="form_border">
                 <div class="center">
-                    <label for="">Día</label>
-                    <input type="text" name="dia">
                     <label for="">Mes</label>
                     <input type="text" name="mes">
                     <label for="">Año</label>
