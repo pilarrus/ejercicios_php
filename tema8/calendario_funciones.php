@@ -28,10 +28,17 @@ AAA;
         $meses = [1 => "Enero", 2 => "Febrero", 3 => "Marzo", 4 => "Abril", 5 => "Mayo",
         6 => "Junio", 7 => "Julio", 8 => "Agosto", 9 => "Septiembre", 10 => "Octubre",
         11 => "Noviembre", 12 => "Diciembre"];
-        $dias_semana = ["L", "M", "X", "J", "V", "S", "D"];
-        $dia_actual = new DateTime();
-        echo $dia_actual->format('D');
-        //echo "año: " . $anio . " mes:" . $mes;
+        $dias_semana = ["Mon" => "L", "Tue" => "M", "Wed" => "X", "Thu" => "J", "Fri" => "V", "Sat" => "S", "Sun" => "D"];
+        
+        $dia_comienzo = new DateTime("$mes/1/$anio");
+        echo $dia_comienzo->format('D-d-m-Y') . "<br>";
+        //echo $dia_comienzo->format('d');
+        
+        $dia_fin_str = new DateTime("$mes/1/$anio");
+        $dia_fin_str->modify('last day of this month');
+        echo $dia_fin_str->format('d');
+        //echo $dia_fin->format('D-d-m-Y');
+
         echo <<<AAA
         <div class="center">
             <table>
@@ -45,6 +52,12 @@ AAA;
                     }
                 echo <<<AAA
                 </tr>
+AAA;
+                /*$dia_fin = intval($dia_fin_str->format('d'));
+                for($i = 1; $i <= $dia_fin; $i++) {
+                    echo "<td></td>";
+                }*/
+            echo <<<AAA
             </table>
         </div>
 AAA;
