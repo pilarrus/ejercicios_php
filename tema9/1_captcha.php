@@ -5,11 +5,13 @@
     $archivo = "fondos/fondo.jpeg";
     $imagen = imagecreatefromjpeg($archivo);
     $fuente = 5;
-    $x = 2;
-    $y = 1;
+    $x = 75;
+    $y = 35;
     $texto = "perro";
     $color = imagecolorallocate($imagen, 255, 0, 0);
-    $img = imagestring($imagen, $fuente, $x, $y, $texto, $color);
-    imagejpeg($img);
+    $imgText = imagestring($imagen, $fuente, $x, $y, $texto, $color);
+    imagejpeg($imagen);
+
+    imagedestroy($imagen);
 
 ?>
