@@ -102,7 +102,7 @@
         <div class="col_1_of_2">
             <h2>Tema 9 - </h2>
             <div class="exercise">
-                <a href="tema9/1_captcha.php">Ejercicio 1 - Captcha</a>
+                <a href="tema9_header_GD/1_pintar_captcha.php">Ejercicio 1 - Captcha</a>
             </div>
             <!--<div class="exercise">
                 <a href="#">Ejercicio 2</a>
