@@ -1,6 +1,5 @@
 <?php 
     function buffer_captcha() {
-        ob_start();
         $archivo = "fondos/fondo.jpeg";
         $imagen = imagecreatefromjpeg($archivo);
         $tamaño = 25;
@@ -25,11 +24,12 @@
     }
 
     function convertir_a_base_64($image_data) {
-        //$imagedata = file_get_contents("tux.jpg");
-        $image = base64_encode($imagedata);
-        echo $image;
+        $image = base64_encode($image_data);
+        ob_end_flush();
         echo <<<AAA
-        <img src="data:image/jpg;base64,$image">
+        <div class="center">
+            <img src="data:image/jpg;base64,$image">
+        </div>
 AAA;
     }
 

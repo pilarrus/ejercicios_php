@@ -4,9 +4,6 @@
     require("./1_funcion_buffer_captcha.php");
     $css = ["base", "buttons", "forms", "positions", "style"];
     
-    /*pintar_cabecera_html('Ejercicio 1', $css);
-    echo "<body>";
-    pintar_button_return_exercises_html();*/
     //$imagen = "1_captcha.php";
     $imagen = buffer_captcha();
     if(isset($_POST['submit'])) {
@@ -19,10 +16,12 @@
         pintar_cabecera_html('Ejercicio 1', $css);
         echo "<body>";
         pintar_button_return_exercises_html();
-        echo <<<AAA
+        convertir_a_base_64($imagen);
+        /*echo <<<AAA
         <div class="center">
             <img src="$imagen" alt="captcha">
-        </div>
+        </div>*/
+        echo <<<AAA
         <div class="center">
             <form action="$_SERVER[PHP_SELF]" method="post" class="form_border">
 AAA;
