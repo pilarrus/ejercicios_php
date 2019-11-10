@@ -83,9 +83,6 @@
             <div class="exercise">
                 <a href="tema7/3_editor_texto.php">Ejercicio 3 - Editor de texto</a>
             </div>
-            <!--<div class="exercise">
-                <a href="#">Ejercicio 2</a>
-            </div>-->
         </div>
     </div>
     <div class="row">       
