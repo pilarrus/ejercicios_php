@@ -113,7 +113,13 @@
         <div class="col_1_of_2">
             <h2>Tema 11 - COOKIES y JSON</h2>
             <div class="exercise">
-                <a href="tema11_cookies_y_json/1_setcookies.php">Ejercicio 1 - Ejercicio teórico</a>
+                <a href="tema11_cookies_y_json/ejercicio_teorico/setcookies.php">Ejercicio 1 - Ejercicio teórico setcookies</a>
+            </div>
+            <div class="exercise">
+                <a href="tema11_cookies_y_json/ejercicio_teorico/vercookies.php">Ejercicio 2 - Ejercicio teórico vercookies</a>
+            </div>
+            <div class="exercise">
+                <a href="tema11_cookies_y_json/ejercicio_teorico/comprobarcookies.php">Ejercicio 3 - Ejercicio teórico comprobarcookies</a>
             </div>
         </div>
 
