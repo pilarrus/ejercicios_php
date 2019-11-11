@@ -121,6 +121,9 @@
             <div class="exercise">
                 <a href="tema11_cookies_y_json/ejercicio_teorico/comprobarcookies.php">Ejercicio 3 - Ejercicio teórico comprobarcookies</a>
             </div>
+            <div class="exercise">
+                <a href="tema11_cookies_y_json/ejercicios_de_cookies/index.php">Ejercicio 4 - Ejercicio teórico comprobarcookies</a>
+            </div>
         </div>
 
         <!--<div class="col_1_of_2">
