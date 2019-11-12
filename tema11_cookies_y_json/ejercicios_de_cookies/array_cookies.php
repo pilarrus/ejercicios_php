@@ -1,7 +1,7 @@
 <?php
 
-    $array_cookies[0] = ["usuario", "user"]
-    $array_cookies[1] = ["contraseña", "password"]
-    $array_cookies[2] = ["enviar", "submit"];
+    $array_idiomas[0] = ["usuario", "user"]
+    $array_idiomas[1] = ["contraseña", "password"]
+    $array_idiomas[2] = ["enviar", "submit"];
 
 ?>
