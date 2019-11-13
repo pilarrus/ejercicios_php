@@ -3,7 +3,7 @@
     function pintar_form_config() {
         echo <<<AAA
         <div class="center">
-            <form action="" method="post">
+            <form action="index.php" method="post">
                 <div class="center">
                     <label for="idioma">Selecciona el idioma</label>
                     <select name="idioma" id="idioma" require>
@@ -36,13 +36,32 @@
 AAA;
     }
 
-    function pintar_label_input_text($label, $name_input) {
-        echo <<<AAA
-        <div class="center">
-            <label>$label</label>
-            <input type="text" name="$name_input">
-        </div>
-AAA;
+    function pintar_label_input_text($id, $text_label, $name_input) {
+        echo "<div class=\"center\">";
+            pintar_label($id, $text_label);
+            pintar_input_text($id, $name_input);
+        echo "</div>";
     }
+
+    function pintar_label($id, $text) {
+        echo "<label for="$id">$label</label>";
+    }
+
+    function pintar_input_text($id, $name) {
+        echo "<input id=\"$id\" type=\"text\" name=\"$name\">";
+    }
+
+    function pintar_options($xs) {
+        foreach($xs as $x) {
+            echo "<option value=\"$x\">$x</option>";
+        }
+    }
+
+    function pintar_select($id, $name, $xs) {
+        echo "<select name=\"color_fuente\" id=\"color_fuente\" require>";
+        pintar_options($xs);
+        echo "</select>";
+    }
+
 
 ?>
