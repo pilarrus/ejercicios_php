@@ -1,0 +1,18 @@
+{
+    "Español": {
+        "titulo": "Selecciona tus preferencias",
+        "Idiomas": {
+            "Español":"Español", 
+            "Inglés": "Inglés"
+        },
+        "Botón": "Guardar"
+    },
+    "Inglés": {
+        "titulo": "Select your preferences",
+        "Idiomas": {
+            "Español":"Spanish", 
+            "Inglés": "English"
+        },
+        "Botón": "Save"
+    }
+}

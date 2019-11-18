@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/positions.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="img">
     <h1>EJERCICIOS</h1>
 
@@ -52,7 +54,7 @@
             </div>
         </div>
     </div>
-    <div class="row">       
+    <div class="row">
         <div class="col_1_of_2">
             <h2>Tema 5 - Upload</h2>
             <div class="exercise">
@@ -85,7 +87,7 @@
             </div>
         </div>
     </div>
-    <div class="row">       
+    <div class="row">
         <div class="col_1_of_2">
             <h2>Tema 8 - Fechas</h2>
             <div class="exercise">
@@ -109,7 +111,7 @@
             </div>
         </div>
     </div>
-    <div class="row">       
+    <div class="row">
         <div class="col_1_of_2">
             <h2>Tema 11 - COOKIES y JSON</h2>
             <div class="exercise">
@@ -122,7 +124,10 @@
                 <a href="tema11_cookies_y_json/ejercicio_teorico/comprobarcookies.php">Ejercicio 3 - Ejercicio teórico comprobarcookies</a>
             </div>
             <div class="exercise">
-                <a href="tema11_cookies_y_json/ejercicios_de_cookies/index.php">Ejercicio 4 - Ejercicio teórico comprobarcookies</a>
+                <a href="tema11_cookies_y_json/ejercicios_de_cookies/ver_formulario.php">Ejercicio 4 - Ejercicio de cookies</a>
+            </div>
+            <div class="exercise">
+                <a href="tema11_cookies_y_json/ejercicios_de_cookies/ver_formulario_json.php">Ejercicio 5 - Ejercicio de cookies con JSON</a>
             </div>
         </div>
 
@@ -133,6 +138,7 @@
             </div>
         </div>-->
     </div>
-    
+
 </body>
+
 </html>

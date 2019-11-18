@@ -1,11 +1,7 @@
 <?php
-    $array_idiomas['Español']['titulo'] = "Selecciona tus preferencias";
-    $array_idiomas['Español']["Idiomas"] = ["Español", "Inglés"];
-    $array_idiomas['Español']["Botón"] = "Guardar";
-
-    $array_idiomas['Inglés']['titulo'] = "Select your preferences";
-    $array_idiomas['Inglés']["Idiomas"] = ["Spanish", "English"];
-    $array_idiomas['Inglés']["Botón"] = "Save";
+    $string_json = file_get_contents("./idiomas.json", true);
+    $json = json_decode($string_json);
+    //echo $json->Español->titulo;
 
     if(isset($_POST['submit'])) {
         setcookie("idioma", $_POST['Idiomas'], time() + 86400);
@@ -14,10 +10,10 @@
     }
     
     $valor_cookie = $_COOKIE['idioma'] ?? 'Español';
-    $titulo = $array_idiomas[$valor_cookie]["titulo"];
-    $español = $array_idiomas[$valor_cookie]["Idiomas"][0];
-    $ingles = $array_idiomas[$valor_cookie]["Idiomas"][1];
-    $boton = $array_idiomas[$valor_cookie]["Botón"];
+    $titulo = $json->$valor_cookie->titulo;
+    $español = $json->$valor_cookie->Idiomas->Español;
+    $ingles = $json->$valor_cookie->Idiomas->Inglés;
+    $boton = $json->$valor_cookie->Botón;
     echo <<<AAA
     <div class="center">
         <form action="$_SERVER[PHP_SELF]" method="POST">
