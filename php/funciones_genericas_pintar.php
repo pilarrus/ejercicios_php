@@ -1,4 +1,16 @@
 <?php
+
+    function pintar_base_html($ruta, $css, $funcion) {
+        pintar_cabecera_html($ruta, $css);
+        echo "<body>";
+        pintar_button_volver_a_ejercicios($ruta);
+        $funcion();
+        echo <<<AAA
+        </body>
+        </html>
+AAA;
+    }
+
     function pintar_button_submit($name, $texto) {
         echo <<<AAA
         <button type="submit" name="$name" value="$name">$texto</button>
@@ -27,13 +39,13 @@ AAA;
             echo "</head>\n";
     }
 
-    function pintar_input($type, $name, $value = "", $texto = "", $id = "") {
+    function pintar_input($type, $name, $value="", $texto="", $id="") {
         echo <<<AAA
-        <input type="$type" name="$name" value="$value id="$id">$texto
+        <input type="$type" name="$name" value="$value" id="$id"/>$texto
 AAA;
     }
 
-    function pintar_label($texto, $id = "") {
+    function pintar_label($texto, $id="") {
         echo <<<AAA
         <label for="$id">$texto</label>
 AAA;

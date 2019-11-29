@@ -141,6 +141,9 @@
     <div class="row">
         <div class="col_1_of_2">
             <h2>Tema 15 - Sesiones</h2>
+            <div class="exercise">
+                <a href="tema15_sesiones/registro_usuarios.php">Registro con sesión</a>
+            </div>
             <!--<div class="exercise">
                 <a href="tema15_sesiones/ejemplos/ejemplo.php">Ejemplo</a>
             </div>
