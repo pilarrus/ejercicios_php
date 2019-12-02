@@ -142,6 +142,9 @@
         <div class="col_1_of_2">
             <h2>Tema 15 - Sesiones</h2>
             <div class="exercise">
+                <a href="tema15_sesiones/ejercicio_teorico/acreditacion.php">Acreditación</a>
+            </div>
+            <div class="exercise">
                 <a href="tema15_sesiones/registro_usuarios.php">Registro con sesión</a>
             </div>
             <!--<div class="exercise">

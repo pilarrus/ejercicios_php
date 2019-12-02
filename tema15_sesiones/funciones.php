@@ -1,5 +1,4 @@
 <?php
-
     function pintar_form_registro($ruta, $css) {
         $funcion = function() {
             echo <<<AAA
@@ -18,11 +17,29 @@ AAA;
                     pintar_input("text", "segundo_apellido");
                     echo <<<AAA
                 </fieldset>
+AAA;
+                pintar_button_submit('submit', 'Enviar');
+                echo <<<AAA
             </form>
         </div>
 AAA;
         };
         pintar_base_html($ruta, $css, $funcion);
+    }
+
+    function pintar_resultado_registro() {
+        $campos = ['nombre', 'primer_apellido', 'segundo_apellido'];
+        foreach ($campos as $key => $campo) {
+            comprobar_campo($campo);
+        }
+    }
+
+    function comprobar_campo($x) {
+        if(!empty($_POST[$x])) {
+            $_SESSION[$x] = $_POST[$x];
+        } else {
+            echo "<p>Debes introducir el $x</p>";
+        }
     }
 
 ?>

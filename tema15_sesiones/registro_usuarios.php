@@ -7,8 +7,8 @@
     if(isset($_POST['submit'])) {
         pintar_resultado_registro();
     } else {
-        pintar_form_registro($ruta, $css);
-        
+        //pintar_form_registro($ruta, $css);
+        header('Location: ./formulario_registro?ruta=$ruta&css=$css');
     }
 
 ?>
