@@ -46,3 +46,7 @@ textarea {
     margin: 1rem 10rem;
     padding: 1rem;
 }
+
+.rojo {
+    border: 1px solid red;
+}

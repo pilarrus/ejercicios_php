@@ -1,6 +1,7 @@
 <?php
-
+    session_start();
     require("../php/funciones_genericas_pintar.php");
+    require("./funciones.php");
     $ruta = "..";
     $css = ["base", "buttons", "forms", "positions", "style"];
 
@@ -10,13 +11,21 @@
             <legend>Información Personal</legend>
 AAA;
             pintar_label("Nombre");
-            pintar_input("text", "nombre");
+            ($_SESSION['nombre'] != "")
+            ? pintar_input("text", 'nombre', $_SESSION['nombre'])
+            : pintar_input("text", 'nombre', $_SESSION['nombre'], "", 'rojo');
             echo "<br/>";
+
             pintar_label("Primer apellido");
-            pintar_input("text", "primer_apellido");
+            ($_SESSION['primer_apellido'] != "")
+            ? pintar_input("text", "primer_apellido", $_SESSION['primer_apellido'])
+            : pintar_input("text", "primer_apellido", $_SESSION['primer_apellido'], "", 'rojo');
             echo "<br/>";
+
             pintar_label("Segundo apellido");
-            pintar_input("text", "segundo_apellido");
+            ($_SESSION['segundo_apellido'] != "")
+            ? pintar_input("text", "segundo_apellido", $_SESSION['segundo_apellido'])
+            : pintar_input("text", "segundo_apellido", $_SESSION['segundo_apellido'], "", 'rojo');
             echo <<<AAA
         </fieldset>
 AAA;
@@ -30,13 +39,21 @@ AAA;
             <legend>Datos de acceso</legend>
 AAA;
             pintar_label("Usuario");
-            pintar_input("text", "usuario");
+            ($_SESSION['usuario'] != "")
+            ? pintar_input("text", "usuario", $_SESSION['usuario'])
+            : pintar_input("text", "usuario", $_SESSION['usuario'], "", 'rojo');
             echo "<br/>";
+
             pintar_label("E-mail");
-            pintar_input("email", "email");
+            ($_SESSION['email'] != "")
+            ? pintar_input("email", "email", $_SESSION['email'])
+            : pintar_input("email", "email", $_SESSION['email'], "", 'rojo');
             echo "<br/>";
+            
             pintar_label("Contraseña");
-            pintar_input("password", "contrasenia");
+            ($_SESSION['contrasenia'] != "")
+            ? pintar_input("password", "contrasenia", $_SESSION['contrasenia'])
+            : pintar_input("password", "contrasenia", $_SESSION['contrasenia'], "", 'rojo');
             echo <<<AAA
         </fieldset>
 AAA;
@@ -60,7 +77,7 @@ AAA;
     };
 
     $formulario = 'formulario';
-    
+
     function pintar_base_html($ruta, $css, $formulario) {
         pintar_cabecera_html($ruta, $css);
         echo "<body>";
@@ -73,31 +90,7 @@ AAA;
     }
 
     pintar_base_html($ruta, $css, $formulario);
-    
-    /*
-    $formulario = function() {
-        echo <<<AAA
-        <div class="center">
-        <form action="$_SERVER[PHP_SELF]" method="post">
-            <fieldset>
-                <legend>Información Personal</legend>
-AAA;
-                pintar_label("Nombre");
-                pintar_input("text", "nombre");
-                echo "<br/>";
-                pintar_label("Primer apellido");
-                pintar_input("text", "primer_apellido");
-                echo "<br/>";
-                pintar_label("Segundo apellido");
-                pintar_input("text", "segundo_apellido");
-                echo <<<AAA
-            </fieldset>
-AAA;
-            pintar_button_submit('submit', 'Enviar');
-            echo <<<AAA
-        </form>
-    </div>
-AAA;
-    };*/
+
+    var_dump($_SESSION);
 
 ?>

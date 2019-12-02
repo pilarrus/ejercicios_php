@@ -1,15 +1,15 @@
 <?php
 
-    function pintar_base_html($ruta, $css, $funcion) {
+    /*function pintar_base_html($ruta, $css, $funcion) {
         pintar_cabecera_html($ruta, $css);
         echo "<body>";
         pintar_button_volver_a_ejercicios($ruta);
-        $funcion();
+        $funcion('info_personal');
         echo <<<AAA
         </body>
         </html>
 AAA;
-    }
+    }*/
 
     function pintar_button_submit($name, $texto) {
         echo <<<AAA
@@ -39,9 +39,9 @@ AAA;
             echo "</head>\n";
     }
 
-    function pintar_input($type, $name, $value="", $texto="", $id="") {
+    function pintar_input($type, $name, $value="", $texto="", $class="", $id="") {
         echo <<<AAA
-        <input type="$type" name="$name" value="$value" id="$id"/>$texto
+        <input type="$type" name="$name" value="$value" class="$class" id="$id"/>$texto
 AAA;
     }
 

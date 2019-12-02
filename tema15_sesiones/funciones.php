@@ -1,5 +1,6 @@
 <?php
-    function pintar_form_registro($ruta, $css) {
+
+    /*function pintar_form_registro($ruta, $css) {
         $funcion = function() {
             echo <<<AAA
             <div class="center">
@@ -25,21 +26,45 @@ AAA;
 AAA;
         };
         pintar_base_html($ruta, $css, $funcion);
-    }
+    }*/
 
-    function pintar_resultado_registro() {
+    /*function pintar_resultado_registro() {
         $campos = ['nombre', 'primer_apellido', 'segundo_apellido'];
         foreach ($campos as $key => $campo) {
             comprobar_campo($campo);
         }
+    }*/
+
+    function comprobar_campos($campos) {
+        foreach ($campos as $key => $campo) {
+            establecer_variables_sesion($campo);
+        }
     }
 
-    function comprobar_campo($x) {
+    function establecer_variables_sesion($x) {
         if(!empty($_POST[$x])) {
             $_SESSION[$x] = $_POST[$x];
         } else {
-            echo "<p>Debes introducir el $x</p>";
+            $_SESSION[$x] = "";
         }
     }
+
+    /*function comprobar_campos($campos) {
+        $campos_erroneos = [];
+        foreach ($campos as $key => $campo) {
+            $campo = establecer_variables_sesion($campo);
+            array_push($campos_erroneos, $campo);
+        }
+        return $campos_erroneos;
+    } */
+
+    /*function establecer_variables_sesion($x) {
+        if(!empty($_POST[$x])) {
+            $_SESSION[$x] = $_POST[$x];
+        } else {
+            //echo "<p>Debes introducir el $x</p>";
+            return $x;
+        }
+    }*/
 
 ?>
