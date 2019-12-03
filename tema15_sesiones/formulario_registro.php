@@ -5,9 +5,29 @@
     $css = ["base", "buttons", "forms", "positions", "style"];
 
     function datos_academicos() {
-        $idiomas = ["Inglés" => "ingles", "Francés" => "frances", "Español", "espaniol"];
+        $idiomas = ["Inglés" => "ingles", "Francés" => "frances", "Español" => "espaniol"];
         $titulaciones = ["E.S.O." => "eso", "Bachillerato" => "bachillerato", "Grado medio" => "grado_medio", "Grado superior" => "grado_superior"];
+        
+        echo <<<AAA
+        <fieldset>
+            <legend>Datos académicos</legend>
+AAA;
+            pintar_label("Titulaciones");
+            pintar_select("titulaciones[]", $titulaciones, true);
+            echo "<br/>";
+
+            pintar_label("Idiomas");
+            foreach ($idiomas as $label => $value) {
+                pintar_input("checkbox", "idiomas[]", $value, $label);
+            }
+
+        echo <<<AAA
+        </fieldset>
+        <br/>
+AAA;
     }
+
+    $datos_academicos = 'datos_academicos';
 
     function info_personal() {
         $campos = ["Nombre" => "nombre", "Primer apellido" => "primer_apellido", "Segundo apellido" => "segundo_apellido"];
@@ -53,7 +73,7 @@ AAA;
 
     $datos_de_acceso = 'datos_de_acceso';
 
-    function formulario($datos_de_acceso, $info_personal) {
+    function formulario($datos_de_acceso, $info_personal, $datos_academicos) {
         $url = "./registro_usuarios.php";
         echo <<<AAA
         <div class="center">
@@ -61,6 +81,7 @@ AAA;
 AAA;
             $datos_de_acceso();
             $info_personal();
+            $datos_academicos();
             pintar_button_submit('submit', 'Enviar');
             echo <<<AAA
         </form>
@@ -74,7 +95,7 @@ AAA;
         pintar_cabecera_html($ruta, $css);
         echo "<body>";
         pintar_button_volver_a_ejercicios($ruta);
-        $formulario('datos_de_acceso', 'info_personal');
+        $formulario('datos_de_acceso', 'info_personal', 'datos_academicos');
         echo <<<AAA
         </body>
         </html>

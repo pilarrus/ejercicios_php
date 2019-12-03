@@ -65,22 +65,33 @@ AAA;
         }
     }
    
-    function pintar_options($options) {
-        foreach($options as $option) {
+    function pintar_options($options, $checked=false) {
+        foreach($options as $label => $option) {
             echo <<<AAA
-            <option value="$option">$option</option>
+            <option value="$option">$label</option>
 AAA;
         }
     }
 
-    function pintar_select($name, $options) {
-        echo <<<AAA
-        <select name="$name">
+    function pintar_select($name, $options, $multiple=false, $checked=false) {
+        if(!$multiple) {
+            echo <<<AAA
+            <select name="$name">
+AAA;
+                pintar_options($options);
+            echo <<<AAA
+            </select>
+AAA;
+        } else {
+            echo <<<AAA
+        <select name="$name" multiple>
 AAA;
             pintar_options($options);
         echo <<<AAA
         </select>
 AAA;
+        }
+        
     }
 
 ?>

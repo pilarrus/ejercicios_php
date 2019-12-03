@@ -56,3 +56,13 @@ textarea {
     border: 1px solid black;
     color: black;
 }
+
+fieldset {
+    border: 1px solid gray;
+    padding: 2px;
+    margin: 20px;
+}
+
+legend {
+    margin-left: 10px;
+}

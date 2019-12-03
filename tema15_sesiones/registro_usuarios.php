@@ -5,7 +5,7 @@
     require("./funciones.php");
     $ruta = "..";
     $css = ["base", "buttons", "forms", "positions", "style"];
-    $campos = ['usuario', 'email', 'contrasenia', 'nombre', 'primer_apellido', 'segundo_apellido', 'sexo'];
+    $campos = ['usuario', 'email', 'contrasenia', 'nombre', 'primer_apellido', 'segundo_apellido', 'sexo', 'titulaciones', 'idiomas'];
 
     if(isset($_POST['submit'])) {
         $campos = comprobar_campos($campos);
