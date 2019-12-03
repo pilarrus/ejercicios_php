@@ -39,15 +39,21 @@ AAA;
             echo "</head>\n";
     }
 
-    function pintar_input($type, $name, $value="", $texto="", $class="", $id="") {
-        echo <<<AAA
-        <input type="$type" name="$name" value="$value" class="$class" id="$id"/>$texto
+    function pintar_input($type, $name, $value="", $texto="", $class="", $checked=false) {
+        if(!$checked) {
+            echo <<<AAA
+            <input type="$type" name="$name" value="$value" class="$class" />$texto
 AAA;
+        } else {
+            echo <<<AAA
+            <input type="$type" name="$name" value="$value" class="$class" checked />$texto
+AAA;
+        }
     }
 
-    function pintar_label($texto, $id="") {
+    function pintar_label($texto) {
         echo <<<AAA
-        <label for="$id">$texto</label>
+        <label>$texto</label>
 AAA;
     }
 

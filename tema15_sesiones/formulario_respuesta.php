@@ -5,7 +5,10 @@
     $ruta = "..";
     $css = ["base", "buttons", "forms", "positions", "style"];
 
+    
+
     function info_personal() {
+        $sexo = ["Mujer", "Hombre", "NS/NC"];
         echo <<<AAA
         <fieldset>
             <legend>Información Personal</legend>
@@ -26,10 +29,20 @@ AAA;
             ($_SESSION['segundo_apellido'] != "")
             ? pintar_input("text", "segundo_apellido", $_SESSION['segundo_apellido'])
             : pintar_input("text", "segundo_apellido", $_SESSION['segundo_apellido'], "", 'rojo');
+            echo "<br/>";
+            
+            pintar_label("Sexo");
+            echo "<br/>";
+            foreach ($sexo as $key => $value) {
+                ($_SESSION['sexo'] == $value)
+                ? pintar_input("radio", "sexo", $_SESSION['sexo'], $value, "", true)
+                : pintar_input("radio", "sexo", $value, $value, "rojo");
+            }
+            
             echo <<<AAA
         </fieldset>
 AAA;
-    };
+    }
 
     $info_personal = 'info_personal';
 
@@ -54,6 +67,7 @@ AAA;
             ($_SESSION['contrasenia'] != "")
             ? pintar_input("password", "contrasenia", $_SESSION['contrasenia'])
             : pintar_input("password", "contrasenia", $_SESSION['contrasenia'], "", 'rojo');
+
             echo <<<AAA
         </fieldset>
 AAA;
@@ -74,7 +88,7 @@ AAA;
         </form>
     </div>
 AAA;
-    };
+    }
 
     $formulario = 'formulario';
 

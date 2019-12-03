@@ -4,39 +4,48 @@
     $ruta = "..";
     $css = ["base", "buttons", "forms", "positions", "style"];
 
+    function datos_academicos() {
+        $idiomas = ["Inglés" => "ingles", "Francés" => "frances", "Español", "espaniol"];
+        $titulaciones = ["E.S.O." => "eso", "Bachillerato" => "bachillerato", "Grado medio" => "grado_medio", "Grado superior" => "grado_superior"];
+    }
+
     function info_personal() {
+        $campos = ["Nombre" => "nombre", "Primer apellido" => "primer_apellido", "Segundo apellido" => "segundo_apellido"];
+        $sexo = ["Mujer", "Hombre", "NS/NC"];
         echo <<<AAA
         <fieldset>
             <legend>Información Personal</legend>
 AAA;
-            pintar_label("Nombre");
-            pintar_input("text", "nombre");
+            foreach ($campos as $label => $name) {
+                pintar_label($label);
+                pintar_input("text", $name);
+                echo "<br/>";
+            }
+
+            pintar_label("Sexo");
             echo "<br/>";
-            pintar_label("Primer apellido");
-            pintar_input("text", "primer_apellido");
-            echo "<br/>";
-            pintar_label("Segundo apellido");
-            pintar_input("text", "segundo_apellido");
+            foreach ($sexo as $key => $value) {
+                pintar_input("radio", "sexo", $value, $value);
+            }
+
             echo <<<AAA
         </fieldset>
 AAA;
-    };
+    }
 
     $info_personal = 'info_personal';
 
     function datos_de_acceso() {
+        $campos = ["Usuario" => "usuario", "E-mail" => "email", "Contraseña" => "contrasenia"];
         echo <<<AAA
         <fieldset>
             <legend>Datos de acceso</legend>
 AAA;
-            pintar_label("Usuario");
-            pintar_input("text", "usuario");
-            echo "<br/>";
-            pintar_label("E-mail");
-            pintar_input("email", "email");
-            echo "<br/>";
-            pintar_label("Contraseña");
-            pintar_input("password", "contrasenia");
+            foreach ($campos as $label => $name) {
+                pintar_label($label);
+                pintar_input("text", $name);
+                echo "<br/>";
+            }
             echo <<<AAA
         </fieldset>
 AAA;
@@ -57,7 +66,7 @@ AAA;
         </form>
     </div>
 AAA;
-    };
+    }
 
     $formulario = 'formulario';
     
@@ -73,31 +82,5 @@ AAA;
     }
 
     pintar_base_html($ruta, $css, $formulario);
-    
-    /*
-    $formulario = function() {
-        echo <<<AAA
-        <div class="center">
-        <form action="$_SERVER[PHP_SELF]" method="post">
-            <fieldset>
-                <legend>Información Personal</legend>
-AAA;
-                pintar_label("Nombre");
-                pintar_input("text", "nombre");
-                echo "<br/>";
-                pintar_label("Primer apellido");
-                pintar_input("text", "primer_apellido");
-                echo "<br/>";
-                pintar_label("Segundo apellido");
-                pintar_input("text", "segundo_apellido");
-                echo <<<AAA
-            </fieldset>
-AAA;
-            pintar_button_submit('submit', 'Enviar');
-            echo <<<AAA
-        </form>
-    </div>
-AAA;
-    };*/
 
 ?>

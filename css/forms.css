@@ -49,4 +49,10 @@ textarea {
 
 .rojo {
     border: 1px solid red;
+    color: red;
+}
+
+.rojo:focus {
+    border: 1px solid black;
+    color: black;
 }
