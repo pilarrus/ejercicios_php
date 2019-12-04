@@ -14,9 +14,26 @@
             <legend>Datos académicos</legend>
 AAA;
             pintar_label("Titulaciones");
-            pintar_select("titulaciones[]", $titulaciones, true);
-            echo "<br/>";
+            $session_titulaciones = $_SESSION['titulaciones'];
 
+            if($session_titulaciones == "") {
+                pintar_select("titulaciones[]", $titulaciones, true);
+                echo "<br/>";
+            } else {
+                $i = 0;
+                echo "<select name='titulaciones[]' multiple>";
+                    foreach($titulaciones as $label => $value) {
+                        if($session_titulaciones[$i] == $value) {
+                            echo "<option value=\"$value\" selected>$label</option>";
+                            $i++;
+                        } else {
+                            echo "<option value=\"$value\">$label</option>";
+                        }
+                    }
+                echo "</select>";
+                echo "<br/>";
+            }
+            
             pintar_label("Idiomas");
             foreach ($idiomas as $label => $value) {
                 pintar_input("checkbox", "idiomas[]", $value, $label);
@@ -113,3 +130,5 @@ AAA;
     pintar_base_html($ruta, $css, $formulario);
 
     var_dump($_SESSION);
+    /*echo "<br/>";
+    var_dump($_SESSION['titulaciones']);*/
