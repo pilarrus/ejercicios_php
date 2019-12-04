@@ -11,9 +11,9 @@
 AAA;
     }*/
 
-    function pintar_button_submit($name, $texto) {
+    function pintar_button_submit($name, $texto, $class='submit') {
         echo <<<AAA
-        <button type="submit" name="$name" value="$name">$texto</button>
+        <button type="submit" name="$name" value="$name" class="$class">$texto</button>
 AAA;
     }
 

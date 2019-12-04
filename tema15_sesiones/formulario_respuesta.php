@@ -23,7 +23,7 @@ AAA;
                 $i = 0;
                 echo "<select name='titulaciones[]' multiple>";
                     foreach($titulaciones as $label => $value) {
-                        if($session_titulaciones[$i] == $value) {
+                        if($i < count($session_titulaciones) && $session_titulaciones[$i] == $value) {
                             echo "<option value=\"$value\" selected>$label</option>";
                             $i++;
                         } else {
@@ -35,8 +35,15 @@ AAA;
             }
             
             pintar_label("Idiomas");
+            $i = 0;
+            $session_idiomas = $_SESSION['idiomas'];
             foreach ($idiomas as $label => $value) {
-                pintar_input("checkbox", "idiomas[]", $value, $label);
+                if($i < count($session_idiomas) && $session_idiomas[$i] == $value) {
+                    pintar_input("checkbox", "idiomas[]", $value, $label, "", true);
+                    $i++;
+                } else {
+                    pintar_input("checkbox", "idiomas[]", $value, $label);
+                }
             }
 
         echo <<<AAA
@@ -56,11 +63,16 @@ AAA;
 AAA;
             foreach ($campos as $label => $name) {
                 pintar_label($label);
-                ($_SESSION[$name] != "")
-                ? pintar_input("text", $name, $_SESSION[$name])
-                : pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
-                echo "<br/>";
+                if(validar_cadena($_SESSION[$name])) {
+                    pintar_input("text", $name, $_SESSION[$name]);
+                    echo "<br/>";
+                } else {
+                    pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
+                    //echo "<br/>";
+                    echo "<p>$_SESSION[error_cadena]</p><br/>";
+                }
             }
+            unset($_SESSION['error_cadena']);
             
             pintar_label("Sexo");
             echo "<br/>";
@@ -79,21 +91,53 @@ AAA;
 
     function datos_de_acceso() {
         $campos = ["Usuario" => "usuario", "E-mail" => "email", "Contraseña" => "contrasenia"];
+        $usuarios_registrados = obtener_usuarios_registrados();
+        
         echo <<<AAA
         <fieldset>
             <legend>Datos de acceso</legend>
 AAA;
             foreach ($campos as $label => $name) {
                 pintar_label($label);
-                ($_SESSION[$name] != "")
-                ? pintar_input("text", $name, $_SESSION[$name])
-                : pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
-                echo "<br/>";
-            }
+                
+                if($name == 'usuario') {
+                    $resp = true;
+                    foreach($usuarios_registrados as $usuario_registrado) {
+                        if(!validar_usuario($_SESSION[$name], $usuario_registrado)) {
+                            pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
+                            echo "<p>$_SESSION[error_usuario]</p><br/>";
+                            $resp = false;
+                        break;
+                        }
+                    }
+                    if($resp) {
+                        pintar_input("text", $name, $_SESSION[$name]);
+                        echo "<br/>";
+                    }
+                    unset($_SESSION['error_usuario']);
 
-            echo <<<AAA
-        </fieldset>
-AAA;
+                } elseif($name == 'email') {
+                    if(!validar_email($_SESSION[$name])) {
+                        pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
+                        echo "<p>$_SESSION[error_email]</p><br/>";
+                    } else {
+                        pintar_input("text", $name, $_SESSION[$name]);
+                        echo "<br/>";
+                    }
+                    unset($_SESSION['error_email']);
+
+                } elseif($name == 'contrasenia') {
+                    if(!validar_contrasenia($_SESSION[$name])) {
+                        pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
+                        echo "<p>$_SESSION[error_contrasenia]</p><br/>";
+                    } else {
+                        pintar_input("text", $name, $_SESSION[$name]);
+                        echo "<br/>";
+                    }
+                    unset($_SESSION['error_contrasenia']);
+                }
+            }
+        echo "</fieldset>";
     }
 
     $datos_de_acceso = 'datos_de_acceso';
@@ -107,8 +151,10 @@ AAA;
             $datos_de_acceso();
             $info_personal();
             $datos_academicos();
-            pintar_button_submit('submit', 'Enviar');
+            echo "<div class='center'>";
+                pintar_button_submit('submit', 'Enviar', 'submit2');
             echo <<<AAA
+            </div>
         </form>
     </div>
 AAA;
@@ -119,8 +165,8 @@ AAA;
     function pintar_base_html($ruta, $css, $formulario) {
         pintar_cabecera_html($ruta, $css);
         echo "<body>";
-        pintar_button_volver_a_ejercicios($ruta);
-        $formulario('datos_de_acceso', 'info_personal', 'datos_academicos');
+            pintar_button_volver_a_ejercicios($ruta);
+            $formulario('datos_de_acceso', 'info_personal', 'datos_academicos');
         echo <<<AAA
         </body>
         </html>
@@ -128,7 +174,3 @@ AAA;
     }
 
     pintar_base_html($ruta, $css, $formulario);
-
-    var_dump($_SESSION);
-    /*echo "<br/>";
-    var_dump($_SESSION['titulaciones']);*/

@@ -4,6 +4,7 @@ label {
 
 input {
     margin: 1rem;
+    padding: 2px 5px;
 }
 
 select {
@@ -58,11 +59,20 @@ textarea {
 }
 
 fieldset {
-    border: 1px solid gray;
+    border: 1px solid SLATEGRAY;
     padding: 2px;
     margin: 20px;
+    background-color: #fff;
 }
 
 legend {
     margin-left: 10px;
+    background-color: #fff;
+    padding: 5px;
+}
+
+.form_verde {
+    background-color: #A89F19;
+    padding: 10px;
+    margin-bottom: 20px;
 }

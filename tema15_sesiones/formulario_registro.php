@@ -77,15 +77,17 @@ AAA;
         $url = "./registro_usuarios.php";
         echo <<<AAA
         <div class="center">
-        <form action="$url" method="post">
+            <form action="$url" method="post">
 AAA;
-            $datos_de_acceso();
-            $info_personal();
-            $datos_academicos();
-            pintar_button_submit('submit', 'Enviar');
-            echo <<<AAA
-        </form>
-    </div>
+                $datos_de_acceso();
+                $info_personal();
+                $datos_academicos();
+                echo "<div class='center'>";
+                    pintar_button_submit('submit', 'Enviar', 'submit2');
+                echo <<<AAA
+                </div>
+            </form>
+        </div>
 AAA;
     }
 
@@ -94,8 +96,8 @@ AAA;
     function pintar_base_html($ruta, $css, $formulario) {
         pintar_cabecera_html($ruta, $css);
         echo "<body>";
-        pintar_button_volver_a_ejercicios($ruta);
-        $formulario('datos_de_acceso', 'info_personal', 'datos_academicos');
+            pintar_button_volver_a_ejercicios($ruta);
+            $formulario('datos_de_acceso', 'info_personal', 'datos_academicos');
         echo <<<AAA
         </body>
         </html>
