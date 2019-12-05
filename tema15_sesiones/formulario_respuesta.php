@@ -99,8 +99,48 @@ AAA;
 AAA;
             foreach ($campos as $label => $name) {
                 pintar_label($label);
-                
-                if($name == 'usuario') {
+                switch($name) {
+                    case 'usuario':
+                        $resp = true;
+                        foreach($usuarios_registrados as $usuario_registrado) {
+                            if(!validar_usuario($_SESSION[$name], $usuario_registrado)) {
+                                pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
+                                echo "<p>$_SESSION[error_usuario]</p><br/>";
+                                $resp = false;
+                            break;
+                            }
+                        }
+                        if($resp) {
+                            pintar_input("text", $name, $_SESSION[$name]);
+                            echo "<br/>";
+                        }
+                        unset($_SESSION['error_usuario']);
+                        break;
+
+                    case 'email':
+                        if(!validar_email($_SESSION[$name])) {
+                            pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
+                            echo "<p>$_SESSION[error_email]</p><br/>";
+                        } else {
+                            pintar_input("text", $name, $_SESSION[$name]);
+                            echo "<br/>";
+                        }
+                        unset($_SESSION['error_email']);
+                        break;
+
+                    case 'contrasenia':
+                        if(!validar_contrasenia($_SESSION[$name])) {
+                            pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
+                            echo "<p>$_SESSION[error_contrasenia]</p><br/>";
+                        } else {
+                            pintar_input("text", $name, $_SESSION[$name]);
+                            echo "<br/>";
+                        }
+                        unset($_SESSION['error_contrasenia']);
+                        break;
+                }
+
+                /*if($name == 'usuario') {
                     $resp = true;
                     foreach($usuarios_registrados as $usuario_registrado) {
                         if(!validar_usuario($_SESSION[$name], $usuario_registrado)) {
@@ -135,7 +175,7 @@ AAA;
                         echo "<br/>";
                     }
                     unset($_SESSION['error_contrasenia']);
-                }
+                }*/
             }
         echo "</fieldset>";
     }
