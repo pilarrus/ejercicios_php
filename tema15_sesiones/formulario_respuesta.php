@@ -4,6 +4,7 @@
     require("./funciones.php");
     $ruta = "..";
     $css = ["base", "buttons", "forms", "positions", "style"];
+    //$url = "./registro_usuarios.php";
 
     function datos_academicos() {
         $idiomas = ["Inglés" => "ingles", "Francés" => "frances", "Español" => "espaniol"];
@@ -139,43 +140,6 @@ AAA;
                         unset($_SESSION['error_contrasenia']);
                         break;
                 }
-
-                /*if($name == 'usuario') {
-                    $resp = true;
-                    foreach($usuarios_registrados as $usuario_registrado) {
-                        if(!validar_usuario($_SESSION[$name], $usuario_registrado)) {
-                            pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
-                            echo "<p>$_SESSION[error_usuario]</p><br/>";
-                            $resp = false;
-                        break;
-                        }
-                    }
-                    if($resp) {
-                        pintar_input("text", $name, $_SESSION[$name]);
-                        echo "<br/>";
-                    }
-                    unset($_SESSION['error_usuario']);
-
-                } elseif($name == 'email') {
-                    if(!validar_email($_SESSION[$name])) {
-                        pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
-                        echo "<p>$_SESSION[error_email]</p><br/>";
-                    } else {
-                        pintar_input("text", $name, $_SESSION[$name]);
-                        echo "<br/>";
-                    }
-                    unset($_SESSION['error_email']);
-
-                } elseif($name == 'contrasenia') {
-                    if(!validar_contrasenia($_SESSION[$name])) {
-                        pintar_input("text", $name, $_SESSION[$name], "", 'rojo');
-                        echo "<p>$_SESSION[error_contrasenia]</p><br/>";
-                    } else {
-                        pintar_input("text", $name, $_SESSION[$name]);
-                        echo "<br/>";
-                    }
-                    unset($_SESSION['error_contrasenia']);
-                }*/
             }
         echo "</fieldset>";
     }

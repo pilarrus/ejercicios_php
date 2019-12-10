@@ -18,6 +18,14 @@ h2 {
     margin-top: 3rem;
 }
 
+.warning {
+    color: orange;
+}
+
+.error {
+    border: 1px solid red;
+}
+
 /*body {
     background-image: url("../img/background_index.jpeg");
     background-repeat: no-repeat;

@@ -147,6 +147,9 @@
             <div class="exercise">
                 <a href="tema15_sesiones/registro_usuarios.php">Registro con sesión</a>
             </div>
+            <div class="exercise">
+                <a href="tema15_sesiones/registro/formulario_registro.php">Registro</a>
+            </div>
             <!--<div class="exercise">
                 <a href="tema15_sesiones/ejemplos/ejemplo.php">Ejemplo</a>
             </div>
