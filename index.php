@@ -141,39 +141,18 @@
     <div class="row">
         <div class="col_1_of_2">
             <h2>Tema 15 - Sesiones</h2>
-            <div class="exercise">
+            <!--<div class="exercise">
                 <a href="tema15_sesiones/ejercicio_teorico/acreditacion.php">Acreditación</a>
-            </div>
-            <div class="exercise">
-                <a href="tema15_sesiones/registro_usuarios.php">Registro con sesión</a>
-            </div>
+            </div>-->
             <div class="exercise">
                 <a href="tema15_sesiones/registro/formulario_registro.php">Registro</a>
             </div>
-            <!--<div class="exercise">
-                <a href="tema15_sesiones/ejemplos/ejemplo.php">Ejemplo</a>
-            </div>
-            <div class="exercise">
-                <a href="tema15_sesiones/ejemplos/ejemplo1.php">Ejemplo 1</a>
-            </div>
-            <div class="exercise">
-                <a href="tema15_sesiones/ejemplos/ejemplo2.php">Ejemplo 2</a>
-            </div>
-            <div class="exercise">
-                <a href="tema15_sesiones/ejemplos/visualizar_ejemplo.php">Ejemplo visualizar_ejemplo1</a>
-            </div>
-            <div class="exercise">
-                <a href="tema15_sesiones/pruebas/pruebas.php">Pruebas</a>
-            </div>
-            <div class="exercise">
-                <a href="tema15_sesiones/pruebas/mas_pruebas.php">Más pruebas</a>
-            </div>-->
         </div>
 
         <!--<div class="col_1_of_2">
-            <h2>Tema 13 - Funciones</h2>
+            <h2>Tema  - </h2>
             <div class="exercise">
-                <a href="tema13_funciones/index.php">Ejercicio 1 - Ejercicio funciones</a>
+                <a href="#">Ejercicio  - </a>
             </div>
         </div>-->
     </div>
