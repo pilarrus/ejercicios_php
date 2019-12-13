@@ -140,6 +140,12 @@
     </div>
     <div class="row">
         <div class="col_1_of_2">
+            <h2>Tema 14 - POO</h2>
+            <div class="exercise">
+                <a href="tema14_poo/index.php">Clases</a>
+            </div>
+        </div>
+        <div class="col_1_of_2">
             <h2>Tema 15 - Sesiones</h2>
             <!--<div class="exercise">
                 <a href="tema15_sesiones/ejercicio_teorico/acreditacion.php">Acreditación</a>
@@ -147,14 +153,10 @@
             <div class="exercise">
                 <a href="tema15_sesiones/registro/formulario_registro.php">Registro</a>
             </div>
-        </div>
-
-        <!--<div class="col_1_of_2">
-            <h2>Tema  - </h2>
             <div class="exercise">
-                <a href="#">Ejercicio  - </a>
+                <a href="tema15_sesiones/ahorcado/index.php">Juego del ahorcado</a>
             </div>
-        </div>-->
+        </div>
     </div>
 
 </body>
