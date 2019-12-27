@@ -9,7 +9,7 @@
 
     if(isset($_POST['submit'])) {
         $css = ["style", "base", "buttons"];
-        pintar_cabecera_html('Ejercicio 2', $css);
+        pintar_cabecera_html('Control de acceso', $css);
         echo "<body>\n";
         pintar_button_return_exercises_html();
 
@@ -19,7 +19,7 @@
         echo "</html>\n";
     } else {
         $css = ["style", "base", "buttons", "forms", "positions"];
-        pintar_control_acceso_html('Ejercicio2', $css);
+        pintar_control_acceso_html('Control de acceso', $css);
     }
 ?>
 

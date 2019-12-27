@@ -5,7 +5,7 @@
     
     if(isset($_POST['submit'])) {
         $css = ["style", "base", "buttons"];
-        pintar_cabecera_html('Ejercicio 4', $css);
+        pintar_cabecera_html('Controlar entrada', $css);
         echo "<body>\n";
         pintar_button_return_exercises_html();
         
@@ -20,6 +20,6 @@ AAA;
 
     } else {
         $css = ["style", "base", "buttons", "forms", "positions"];
-        pintar_formulario_control_entrada('Ejercicio 4', $css);
+        pintar_formulario_control_entrada('Controlar entrada', $css);
     }
 ?>

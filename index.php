@@ -39,18 +39,18 @@
         </div>
 
         <div class="col_1_of_2">
-            <h2>Tema 3 - Formularios PHP</h2>
+            <h2>Formularios PHP</h2>
             <div class="exercise">
-                <a href="tema3/1_verbos_irregulares.php">Ejercicio 1 - Juego verbos irregulares</a>
+                <a href="t3_formularios_php/1_verbos_irregulares.php">Juego verbos irregulares</a>
             </div>
             <div class="exercise">
-                <a href="tema3/2_control_acceso.php">Ejercicio 2 - Control de acceso</a>
+                <a href="t3_formularios_php/2_control_acceso.php">Control de acceso</a>
             </div>
             <div class="exercise">
-                <a href="tema3/3_login.php">Ejercicio 3 - Login</a>
+                <a href="t3_formularios_php/3_login.php">Login</a>
             </div>
             <div class="exercise">
-                <a href="tema3/4_controlar_entrada.php">Ejercicio 4 - Textarea-Controlar entrada</a>
+                <a href="t3_formularios_php/4_controlar_entrada.php">Textarea-Controlar entrada</a>
             </div>
         </div>
     </div>

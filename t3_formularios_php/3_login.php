@@ -3,9 +3,9 @@
 
     if(isset($_POST['submit'])) {
         $css = ["style", "base", "buttons"];
-        registro('Ejercicio 3', $css);
+        registro('Login', $css);
     } else {
         $css = ["style", "base", "buttons", "forms", "positions"];
-        pintar_formulario_registro('Ejercicio 3', $css);
+        pintar_formulario_registro('Login', $css);
     }
 ?>
