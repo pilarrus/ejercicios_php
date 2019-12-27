@@ -75,15 +75,15 @@
         </div>
 
         <div class="col_1_of_2">
-            <h2>Tema 7 - Tratamiento de cadenas</h2>
+            <h2>Tratamiento de cadenas</h2>
             <div class="exercise">
-                <a href="tema7/1_buscar_posicion.php">Ejercicio 1 - Buscar posición de cadena dentro de otra cadena</a>
+                <a href="t7_cadenas/1_buscar_posicion.php">Buscar posición de cadena dentro de otra cadena</a>
             </div>
             <div class="exercise">
-                <a href="tema7/2_posiciones_existe_reemplazar.php">Ejercicio 2 - Posiciones, existe y reemplazar en una cadena</a>
+                <a href="t7_cadenas/2_posiciones_existe_reemplazar.php">Posiciones, existe y reemplazar en una cadena</a>
             </div>
             <div class="exercise">
-                <a href="tema7/3_editor_texto.php">Ejercicio 3 - Editor de texto</a>
+                <a href="t7_cadenas/3_editor_texto.php">Editor de texto</a>
             </div>
         </div>
     </div>
