@@ -56,21 +56,21 @@
     </div>
     <div class="row">
         <div class="col_1_of_2">
-            <h2>Tema 5 - Upload</h2>
+            <h2>Upload</h2>
             <div class="exercise">
-                <a href="tema5/1_subir_fichero.php">Ejercicio 1 - Subir fichero</a>
+                <a href="t5_upload/1_subir_fichero.php">Subir fichero</a>
             </div>
             <div class="exercise">
-                <a href="tema5/2_subir_gif_jpeg.php">Ejercicio 2 - Subir fichero con extensión .gif o jpeg</a>
+                <a href="t5_upload/2_subir_gif_jpeg.php">Subir fichero con extensión .gif o jpeg</a>
             </div>
             <div class="exercise">
-                <a href="tema5/3_CV.php">Ejercicio 3 - Curriculum Vitae con foto</a>
+                <a href="t5_upload/3_CV.php">Curriculum Vitae con foto</a>
             </div>
             <div class="exercise">
-                <a href="tema5/4_visualizar_foto.php">Ejercicio 4 - Visualizar imagen de una persona</a>
+                <a href="t5_upload/4_visualizar_foto.php">Visualizar imagen de una persona</a>
             </div>
             <div class="exercise">
-                <a href="tema5/5_tratamiento_pdf.php">Ejercicio 5 - Tratamiento de PDF</a>
+                <a href="t5_upload/5_tratamiento_pdf.php">Tratamiento de PDF</a>
             </div>
         </div>
 
