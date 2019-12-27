@@ -132,9 +132,9 @@
         </div>
 
         <div class="col_1_of_2">
-            <h2>Tema 13 - Funciones</h2>
+            <h2>Funciones</h2>
             <div class="exercise">
-                <a href="tema13_funciones/index.php">Ejercicio 1 - Ejercicio funciones</a>
+                <a href="t13_funciones/index.php">Funciones</a>
             </div>
         </div>
     </div>
