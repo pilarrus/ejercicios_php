@@ -113,21 +113,21 @@
     </div>
     <div class="row">
         <div class="col_1_of_2">
-            <h2>Tema 11 - COOKIES y JSON</h2>
+            <h2>COOKIES y JSON</h2>
             <div class="exercise">
-                <a href="tema11_cookies_y_json/ejercicio_teorico/setcookies.php">Ejercicio 1 - Ejercicio teórico setcookies</a>
+                <a href="t11_cookies_y_json/ejercicio_teorico/setcookies.php">(Ejercicio teórico) setcookies</a>
             </div>
             <div class="exercise">
-                <a href="tema11_cookies_y_json/ejercicio_teorico/vercookies.php">Ejercicio 2 - Ejercicio teórico vercookies</a>
+                <a href="t11_cookies_y_json/ejercicio_teorico/vercookies.php">(Ejercicio teórico) vercookies</a>
             </div>
             <div class="exercise">
-                <a href="tema11_cookies_y_json/ejercicio_teorico/comprobarcookies.php">Ejercicio 3 - Ejercicio teórico comprobarcookies</a>
+                <a href="t11_cookies_y_json/ejercicio_teorico/comprobarcookies.php">(Ejercicio teórico) comprobarcookies</a>
             </div>
             <div class="exercise">
-                <a href="tema11_cookies_y_json/ejercicios_de_cookies/ver_formulario.php">Ejercicio 4 - Ejercicio de cookies</a>
+                <a href="t11_cookies_y_json/ejercicios_de_cookies/ver_formulario.php">Cookies</a>
             </div>
             <div class="exercise">
-                <a href="tema11_cookies_y_json/ejercicios_de_cookies/ver_formulario_json.php">Ejercicio 5 - Ejercicio de cookies con JSON</a>
+                <a href="t11_cookies_y_json/ejercicios_de_cookies/ver_formulario_json.php">Cookies con JSON</a>
             </div>
         </div>
 
