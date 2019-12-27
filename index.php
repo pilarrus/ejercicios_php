@@ -17,24 +17,24 @@
 
     <div class="row">
         <div class="col_1_of_2">
-            <h2>Tema 2 - Fundamentos del lenguaje</h2>
+            <h2>Fundamentos del lenguaje</h2>
             <div class="exercise">
-                <a href="tema2/php/1_cajas.php">Ejercicio 1 - Mostar cajas con temperaturas superiores a 4</a>
+                <a href="t2_fundamentos_del_lenguaje/php/1_cajas.php">Mostar cajas con temperaturas superiores a 4</a>
             </div>
             <div class="exercise">
-                <a href="tema2/php/2_tablas_multiplicar.php">Ejercicio 2 - Visualizar tablas de multiplicar</a>
+                <a href="t2_fundamentos_del_lenguaje/php/2_tablas_multiplicar.php">Visualizar tablas de multiplicar</a>
             </div>
             <div class="exercise">
-                <a href="tema2/php/3_heredoc.php">Ejercicio 3 - Visualizar tablas de multiplicar con NEWDOC y HEREDOC</a>
+                <a href="t2_fundamentos_del_lenguaje/php/3_heredoc.php">Visualizar tablas de multiplicar con NEWDOC y HEREDOC</a>
             </div>
             <div class="exercise">
-                <a href="tema2/html/4_enlazar_tablas_multiplicar.html">Ejercicio 4 - Enlazar a tablas de multiplicar</a>
+                <a href="t2_fundamentos_del_lenguaje/html/4_enlazar_tablas_multiplicar.html">Enlazar a tablas de multiplicar</a>
             </div>
             <div class="exercise">
-                <a href="tema2/html/5_form_pide_tabla_multiplicar.html">Ejercicio 5 - Formulario que pide nº de tabla a Visualizar</a>
+                <a href="t2_fundamentos_del_lenguaje/html/5_form_pide_tabla_multiplicar.html">Formulario que pide nº de tabla a Visualizar</a>
             </div>
             <div class="exercise">
-                <a href="tema2/html/6_form_url_por_defecto.html">Ejercicio 6 - URL con tabla del 5 por defecto</a>
+                <a href="t2_fundamentos_del_lenguaje/html/6_form_url_por_defecto.html">URL con tabla del 5 por defecto</a>
             </div>
         </div>
 

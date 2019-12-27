@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ejercicio 2 - Pilar</title>
+    <title>Tablas de multiplicar</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/buttons.css">
@@ -17,7 +17,6 @@
     </button>
     <div class="center">
     <?php
-
         define("NUMTABLAS", 3);
         for($cont = 1; $cont <= NUMTABLAS; $cont++){
             echo "<table class='multiplicationTable'>\n";
@@ -31,7 +30,6 @@
             }
             echo "</table>\n";
         }
-
     ?>
     </div>
 </body>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ejercicio 3 - Pilar</title>
+    <title>HEREDOC</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/buttons.css">
@@ -15,7 +15,7 @@
     <button class="return_exercises">
         <a href="../../index.php">Volver a Ejercicios</a>
     </button>
-    <h2>Ejercicio 1 con HEREDOC</h2>
+    <h2>Cajas con temperaturas (HEREDOC)</h2>
     <div class="center">
     <?php 
         $temperaturas = array();
@@ -66,11 +66,10 @@ EOD;
 EOD;
     ?>
     </div>
-    <h2 class="heredoc">Ejercicio 2 con HEREDOC</h2>
+    <h2 class="heredoc">Tablas de multiplicar (HEREDOC)</h2>
     <div class="center exercise2">
     
     <?php
-
         define("NUMTABLAS", 3);
         for($cont=1; $cont <= NUMTABLAS; $cont++){
             echo <<<EOD
@@ -91,10 +90,8 @@ EOD;
             </table>\n
 EOD;
         }
-
     ?>
     </div>
     <p>NOWDOC no es capaz de interpretar las variables</p>
-    
 </body>
 </html>
