@@ -89,12 +89,12 @@
     </div>
     <div class="row">
         <div class="col_1_of_2">
-            <h2>Tema 8 - Fechas</h2>
+            <h2>Fechas</h2>
             <div class="exercise">
-                <a href="tema8/1_sacar_fechas.php">Ejercicio 1 - Sacar fechas</a>
+                <a href="t8_fechas/1_sacar_fechas.php">Sacar fechas</a>
             </div>
             <div class="exercise">
-                <a href="tema8/2_calendario.php">Ejercicio 2 - Calendario</a>
+                <a href="t8_fechas/2_calendario.php">Calendario</a>
             </div>
         </div>
 
