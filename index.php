@@ -99,15 +99,15 @@
         </div>
 
         <div class="col_1_of_2">
-            <h2>Tema 9 - </h2>
+            <h2>Inclusión de ficheros, Header, GD y base64</h2>
             <div class="exercise">
-                <a href="tema9_header_GD/1_img_desde_fichero.php">Ejercicio 1 - Crear imagen captcha desde un fichero</a>
+                <a href="t9_header_GD_base64/1_img_desde_fichero.php">Crear imagen captcha desde un fichero</a>
             </div>
             <div class="exercise">
-                <a href="tema9_header_GD/2_captcha_base64.php">Ejercicio 2 - Captcha en base64 desde un fichero</a>
+                <a href="t9_header_GD_base64/2_captcha_base64.php">Captcha en base64 desde un fichero</a>
             </div>
             <div class="exercise">
-                <a href="tema9_header_GD/index.php">Ejercicio 3 - Redirigir a Error</a>
+                <a href="t9_header_GD_base64/index.php">Redirigir a Error</a>
             </div>
         </div>
     </div>
