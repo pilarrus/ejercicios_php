@@ -162,7 +162,7 @@
         <div class="col_1_of_2">
             <h2>Tema 21 - AJAX</h2>
             <div class="exercise">
-                <a href="tema21_ajax/index.html">AJAX</a>
+                <a href="t21_ajax/index.html">AJAX</a>
             </div>
         </div>
         <!--<div class="col_1_of_2">
