@@ -168,10 +168,10 @@
         <div class="col_1_of_2">
             <h2>Tema 24 - XML</h2>
             <div class="exercise">
-                <a href="t24_xml/index_ejemplo.php">XML ejemplo</a>
+                <a href="t24_xml/ejemplo/index.php">XML ejemplo</a>
             </div>
             <div class="exercise">
-                <a href="t24_xml/index.php">XML añadir un elemento</a>
+                <a href="t24_xml/index.php">XML añadir un libro</a>
             </div>
         </div>
     </div>

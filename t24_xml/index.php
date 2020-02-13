@@ -4,42 +4,52 @@ include 'catalog.php';
 
 $refBook = [
     'Author' => 'J.K.Rowling',
-    'Title' => 'Harry Potter y la Piedra Filosofal',
+    'Title' => 'Hola',
     'Genre' => 'Ficción',
     'Price' => '12.99',
     'PublishDate' => '1995-02-01',
     'Description' => 'Un joven mago...'
 ];
 
-/*$sxe = new SimpleXMLElement($xmlStr);
-$book = $sxe->addChild('book');
-$book->addAttribute('id', 'bk102');
-
-foreach ($refBook as $key => $value) {
-    $book->addChild($key, $value);
-}*/
-
-//echo $sxe->asXML(), '<br/>';
-
 function crearNodo($xmlStr, $refBook) {
     $sxe = new SimpleXMLElement($xmlStr);
-    $book = $sxe->addChild('book');
+    $book = $sxe->addChild('Book');
     $book->addAttribute('id', 'bk102');
 
     foreach ($refBook as $key => $value) {
         $book->addChild($key, $value);
     }
-    echo $sxe->asXML(), '<br/>';
+    //echo $sxe->asXML(), '<br/>';
+    //var_dump($sxe);
+    return $sxe->asXML();
 }
 
-$xml = simplexml_load_string($xmlStr);
-echo $xml->Book[0]->Author, '<br/>';
-echo $xml->Book['id'], '<br/>';
+$sxe = crearNodo($xmlStr, $refBook);
+//var_dump($sxe);
 
-foreach ($xml as $book => $value) {
-    echo $book . ' ' . $value . '<br/>';
-    if ((string) $value['id'] === 'bk101') {
-        echo 'Hola<br/>';
-        crearNodo($xmlStr, $refBook);
+$xml = simplexml_load_string($sxe);
+//$xml = simplexml_load_string($xmlStr);
+
+$json = json_encode($xml);
+$arrayCatalog = json_decode($json, true);
+
+var_dump($arrayCatalog);
+//echo $arrayCatalog['Book'][0]['@attributes']['id'] . '<br/>';
+/*foreach ($arrayCatalog as $key => $arrayBooks) {
+    //var_dump($key);
+    //var_dump($arrayBooks);
+    foreach ($arrayBooks as $key2 => $arrayBook) {
+        //var_dump($key2);
+        //var_dump($arrayBook);
+        foreach ($arrayBook as $key3 => $value) {
+            //var_dump($key3);
+            //var_dump($value);
+            if(is_array($value)) {
+                //echo $value['id'], '<br/>';
+                if((string) $value['id'] == 'bk101') {
+                    echo "aquí";
+                }
+            }
+        }
     }
-}
+}*/
