@@ -160,18 +160,26 @@
     </div>
     <div class="row">
         <div class="col_1_of_2">
-            <h2>Tema 21 - AJAX</h2>
+            <h2>AJAX</h2>
             <div class="exercise">
                 <a href="t21_ajax/index.html">AJAX</a>
             </div>
         </div>
         <div class="col_1_of_2">
-            <h2>Tema 24 - XML</h2>
+            <h2>XML</h2>
             <div class="exercise">
                 <a href="t24_xml/ejemplo/index.php">XML ejemplo</a>
             </div>
             <div class="exercise">
                 <a href="t24_xml/index.php">XML añadir un libro</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col_1_of_2">
+            <h2>MySQL</h2>
+            <div class="exercise">
+                <a href="t19_app_bookstore/index.php">App Bookstore</a>
             </div>
         </div>
     </div>
