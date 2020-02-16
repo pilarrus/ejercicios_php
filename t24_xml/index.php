@@ -41,10 +41,10 @@ if (!$dom) {
 }
 
 $sxe = simplexml_import_dom($dom);
-var_dump($sxe);
+//var_dump($sxe);
 
 // Le añado un nuevo nodo (libro)
 $sxe = añadirNuevoNodo($sxe, $refBook);
 
 // Lo guardo en un fichero
-$sxe->asXML('catalog2.xml');
+$sxe->asXML('catalog.xml');
