@@ -10,28 +10,6 @@ $refBook = [
     'Description' => 'Un joven mago...'
 ];
 
-// Copia el xml existente
-function copiarXML($sxe, $array) {
-    foreach ($array as $key => $value) {
-        foreach ($value as $key2 => $value2) {
-            $book = $sxe->addChild($key);
-            //echo $key, '<br>';
-            foreach ($value2 as $key3 => $value3) {
-                if(isset($value3['id'])) {
-                    $id = $value3['id'];
-                    //echo $id, '<br>';
-                    $book->addAttribute('id', $id);
-                } else {
-                    //echo $key3 . " " . $value3 . '<br>';
-                    $book->addChild($key3, $value3);
-                }
-            }
-        }
-    }
-    return $sxe;
-}
-
-// Añade un nuevo nodo al xml que he copiado
 function añadirNuevoNodo($sxe, $refBook) {
     $book = $sxe->addChild('Book');
 
@@ -47,13 +25,26 @@ function añadirNuevoNodo($sxe, $refBook) {
 
 if (file_exists('catalog.xml')) {
     $xmlFile = simplexml_load_file('catalog.xml');
-    $json = json_encode($xmlFile);
-    $array = json_decode($json, true);
 } else {
     exit('Error al abrir test.xml');
 }
 
-$sxe = new SimpleXMLElement('<Catalog></Catalog>');
-$sxe = copiarXML($sxe, $array);
+/* Paso el xml a string para obtener el nodo principal
+** que contiene todos los libros*/
+$xmlStr = $xmlFile->asXML();
+$dom = new DOMDocument();
+$dom->loadXML($xmlStr);
+
+if (!$dom) {
+    echo 'Error al parsear el documento';
+    exit;
+}
+
+$sxe = simplexml_import_dom($dom);
+var_dump($sxe);
+
+// Le añado un nuevo nodo (libro)
 $sxe = añadirNuevoNodo($sxe, $refBook);
+
+// Lo guardo en un fichero
 $sxe->asXML('catalog2.xml');
