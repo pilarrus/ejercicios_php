@@ -171,7 +171,10 @@
                 <a href="t24_xml/ejemplo/index.php">XML ejemplo</a>
             </div>
             <div class="exercise">
-                <a href="t24_xml/index.php">XML añadir un libro</a>
+                <a href="t24_xml/addNode/index.php">XML añadir un libro</a>
+            </div>
+            <div class="exercise">
+                <a href="t24_xml/updateNode/index.php">XML modificar un libro</a>
             </div>
         </div>
     </div>

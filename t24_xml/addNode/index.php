@@ -26,7 +26,7 @@ function añadirNuevoNodo($sxe, $refBook) {
 if (file_exists('catalog.xml')) {
     $xmlFile = simplexml_load_file('catalog.xml');
 } else {
-    exit('Error al abrir test.xml');
+    exit('Error al abrir catalog.xml');
 }
 
 /* Paso el xml a string para obtener el nodo principal
