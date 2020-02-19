@@ -10,14 +10,23 @@ if (file_exists($file)) {
 
 function getNode($xmlFile) {
     foreach ($xmlFile->children() as $value) {
-        if ($value['id'] == 'bk103') {
+        if ($value['id'] == 'bk102') {
             return $value;
         }
     }
 }
 
-$sxe = getNode($xmlFile);
+function deleteNodeXPath($xmlFile) {
+    foreach ($xmlFile->xpath("//Book[@id='bk105']") as $book) {
+        $dom = dom_import_simplexml($book);
+        $dom->parentNode->removeChild($dom);
+    }
+}
+
+/*$sxe = getNode($xmlFile);
 $dom = dom_import_simplexml($sxe);
 $dom->parentNode->removeChild($dom);
+*/
 
+deleteNodeXPath($xmlFile);
 echo $xmlFile->asXML($file);
