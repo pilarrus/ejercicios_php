@@ -1,5 +1,7 @@
 <?php
 
+//error_reporting(0);
+
 $refBook = [
     'id' => 'bk103',
     'Author' => 'J.K.Rowling',
@@ -10,41 +12,32 @@ $refBook = [
     'Description' => 'Un joven mago...'
 ];
 
-function añadirNuevoNodo($sxe, $refBook) {
+$file = 'catalog.xml';
+
+function añadirNuevoNodo($sxe, $refBook, $file) {
     $book = $sxe->addChild('Book');
 
     foreach ($refBook as $key => $value) {
-        if($key == 'id') {
+        if ($key == 'id') {
             $book->addAttribute($key, $value);
         } else {
             $book->addChild($key, $value);
         }
     }
-    return $sxe;
+    if(!$sxe->asXML($file)) {
+        throw new \Exception('No se ha podido guardar en el fichero');
+    }
+    //var_dump($sxe);
 }
 
-if (file_exists('catalog.xml')) {
-    $xmlFile = simplexml_load_file('catalog.xml');
+if (file_exists($file)) {
+    $xmlFile = simplexml_load_file($file);
 } else {
-    exit('Error al abrir catalog.xml');
+    exit('Error al abrir ' . $file);
 }
 
-/* Paso el xml a string para obtener el nodo principal
-** que contiene todos los libros*/
-$xmlStr = $xmlFile->asXML();
-$dom = new DOMDocument();
-$dom->loadXML($xmlStr);
-
-if (!$dom) {
-    echo 'Error al parsear el documento';
-    exit;
+try {
+    añadirNuevoNodo($xmlFile, $refBook, $file);
+} catch (\Exception $e) {
+    echo $e->getMessage();
 }
-
-$sxe = simplexml_import_dom($dom);
-//var_dump($sxe);
-
-// Le añado un nuevo nodo (libro)
-$sxe = añadirNuevoNodo($sxe, $refBook);
-
-// Lo guardo en un fichero
-$sxe->asXML('catalog.xml');
