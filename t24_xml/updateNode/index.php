@@ -18,4 +18,4 @@ $xmlFile->Book[2]->Genre = 'Aventuras';
 $result = $xmlFile->asXML($file);
 
 // Si lo ha guardado bien $result es true
-var_dump($result);
+echo $result ? 'Ha sido modificado' : 'No se ha modificado';
