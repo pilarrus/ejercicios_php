@@ -23,20 +23,6 @@
 
 //POST FETCH
 async function mostrar() {
-    /*let data = {
-        objeto: 'hola'
-    };
-
-    console.log(data);
-    let promiseResponse = await fetch("./php.php", {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers:{'Content-Type': 'application/json;'}
-    });
-    console.log(await promiseResponse.json());
-    //const content = await promiseResponse.json();
-    //let promiseResponse = await fetch("./php.php", {method: "POST", body: data});*/
-
     // FUNCIONA
     var data = new FormData();
     data.append("objeto","hola");
